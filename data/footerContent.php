@@ -1,0 +1,1 @@
+<p style="text-align: center;">This is the default footer content, you can change it in the admin panel under settings!</p>
