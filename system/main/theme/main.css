@@ -1,0 +1,135 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-attachment:fixed;
+}
+#content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-family: Ubuntu;
+    margin-bottom: 40px;
+}
+#content *{
+  max-width:100%;
+}
+#topper {
+    height: 40px;
+    width: calc(100% + 20px);
+    max-width:initial;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -31px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#ender {
+    min-height: 25px;
+    width: calc(100% + 20px);
+    max-width:initial;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    margin-bottom: -26px;
+}
+#icon {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 99;
+    width: 64px;
+    height: 64px;
+}
+@media only screen and (max-width: 600px) {
+    #icon {
+        display: none;
+    }
+}
+#MSG_Banner {
+    width: 100%;
+    margin-top: -21px;
+    padding: 0;
+    background: #429A86;
+    text-align: center;
+}
+#nav {
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+#nav-navigation {
+    text-align: center;
+}
+#nav-navigation div {
+    line-height: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+#nav-navigation a div {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: normal;
+    margin-top: 0px!IMPORTANT;
+    display: inline-block;
+    width: initial!IMPORTANT;
+    height: 43px!IMPORTANT;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 4px;
+    margin-bottom: 0;
+}
+#nav-navigation a {
+    text-decoration: none;
+}
+.fancy_input {
+    background: #354D5B;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    margin: 3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.abtn_blue {
+    background-color: #354D5B;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    display: inline-block;
+    text-decoration: none;
+    width: initial;
+    color: white;
+    margin-left: 10px;
+    margin-left:10px;
+    cursor:pointer;
+}
+.abtn_blue:hover {
+    background-color: #587c8c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+.l_red {
+    color: red;
+}
+.l_green {
+    color: limegreen;
+}
+.l_yellow {
+    color: yellow;
+}
+.l_orange {
+    color: orange;
+}
+#adContent{
+	width:100%;
+}
