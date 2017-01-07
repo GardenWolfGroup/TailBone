@@ -20,7 +20,7 @@ The link to this Github repository, which contains the orignial Software,
 MUST be available on homepage of the site.
 
 If you are in any doubt about anything regarding this licence, contact the
-repository owner.
+repository owner, whose email is accessable on the README.md file.
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
