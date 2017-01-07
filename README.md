@@ -8,7 +8,7 @@ Tailbone is a software for Web servers to use, this is designed for
 ## Features
 ---
 1. File Uploader
-⋅⋅1. Subdirectroy support
+  1. Subdirectroy support
 ⋅⋅2. Only supports image files in source
 ⋅⋅3. Ability to upload to subdirectories
 ⋅⋅4. Image viewer for uploaded files
