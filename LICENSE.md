@@ -1,4 +1,4 @@
-MIT License (EDITED)
+MIT License (*EDITED*)
 
 Copyright (c) 2017 CodyTheFurry Toshib-htr
 
