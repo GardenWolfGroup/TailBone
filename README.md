@@ -2,6 +2,8 @@
 ##General Information
 Tailbone is a software for Web servers to use, this is designed for  
 \*NIX Servers, Windows Server DOESN'T WORK with Tailbone at all!
+  
+Any questions regarding this software should be directed at [Toshi Bennett](mailto:toshi@gardenwolf.com?Subject=Tailbone "Send an email to Toshi")
 
 
 ## Features
