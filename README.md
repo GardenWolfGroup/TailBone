@@ -31,4 +31,5 @@ Any questions regarding this software should be directed at [Toshi Bennett](mail
 ##Installation
 1. Download the .zip file
 2. Extract into target directory
-3. Open the domain in a web browser and follow instructions
+3. Make sure the permissions of the data directory are set corrently.
+4. Open the domain in a web browser and follow the on-page instructions
