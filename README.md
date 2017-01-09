@@ -1,8 +1,9 @@
 #[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
-1. [Latest hotfixes](#Latest Hotfixes)
-2. [General Information](#General Information)
-3. [Features](#Features)
+1. [Latest hotfixes](#latest-hotfixes)
+2. [General Information](#general-information)
+3. [Features](#features)
+4. [Installation](#installation)
 
 ##Latest Hotfixes
 v1.01 - Updated system/installer/sys/submit.php file so that the "construction" variable is defined after Tailbone installation.
