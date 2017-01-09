@@ -49,6 +49,7 @@
 		"footerContent" => file_get_contents("./data/footerContent.php"),
 		"adContent" => file_get_contents("./data/adContent.php"),
 		"four04Message" => "Uh oh, looks like that page has gone missing or has been deleted.",
+		"construction" => "false",
 	);
 ?>
 	';
