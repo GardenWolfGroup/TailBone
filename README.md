@@ -3,6 +3,7 @@
 1. [Latest hotfixes](##Latest Hotfixes)
 2. [General Information](##General Information)
 3. [Features](##Features)
+
 ##Latest Hotfixes
 v1.01 - Updated system/installer/sys/submit.php file so that the "construction" variable is defined after Tailbone installation.
 
