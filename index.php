@@ -23,7 +23,7 @@
 		$hosted = true;
 	}
 	
-	$TB['version'] = 1.01;
+	$TB['version'] = 1.02;
 	$runningInIndex = true; //Tells scripts that they are running in the index as they should be.
 	
 	if(file_exists('./data/dataVersion.php')){
