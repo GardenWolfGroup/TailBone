@@ -85,28 +85,28 @@
 		<meta name="keywords" content="<?PHP echo($settings['siteKeywords']); ?>">
 		<meta name="description" content="<?PHP echo($settings['siteDescription']); ?>" />
 		<meta name="author" content="<?PHP echo($settings['siteAuthor']); ?>">
-		<link rel="stylesheet" href="./system/main/theme/loading.css" type="text/css">
-		<link rel="stylesheet" href="./system/main/theme/main.css" type="text/css">
+		<link rel="stylesheet" href="./system/main/theme/loading.css?<?php echo($TB['version']) ?>" type="text/css">
+		<link rel="stylesheet" href="./system/main/theme/main.css?<?php echo($TB['version']) ?>" type="text/css">
 		<?PHP
 			include('./system/main/theme/colours.Scss.php');
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=0.75, minimum-scale=0.75, user-scalable=no"/>
-		<link rel="apple-touch-icon" sizes="57x57" href="./data/logo/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="./data/logo/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="./data/logo/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="./data/logo/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="./data/logo/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="./data/logo/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="./data/logo/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="./data/logo/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="./data/logo/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="./data/logo/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./data/logo/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="./data/logo/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./data/logo/favicon-16x16.png">
-		<link rel="shortcut icon" href="./data/logo/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="./data/logo/favicon.ico" type="image/x-icon">
-		<meta name="msapplication-TileImage" content="./data/logo/ms-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="./data/logo/apple-icon-57x57.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="60x60" href="./data/logo/apple-icon-60x60.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="72x72" href="./data/logo/apple-icon-72x72.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="76x76" href="./data/logo/apple-icon-76x76.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="114x114" href="./data/logo/apple-icon-114x114.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="120x120" href="./data/logo/apple-icon-120x120.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="144x144" href="./data/logo/apple-icon-144x144.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="152x152" href="./data/logo/apple-icon-152x152.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="180x180" href="./data/logo/apple-icon-180x180.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="192x192"  href="./data/logo/android-icon-192x192.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="32x32" href="./data/logo/favicon-32x32.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="96x96" href="./data/logo/favicon-96x96.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="16x16" href="./data/logo/favicon-16x16.png?<?php echo($TB['version']) ?>">
+		<link rel="shortcut icon" href="./data/logo/favicon.ico?<?php echo($TB['version']) ?>" type="image/x-icon">
+		<link rel="icon" href="./data/logo/favicon.ico?<?php echo($TB['version']) ?>" type="image/x-icon">
+		<meta name="msapplication-TileImage" content="./data/logo/ms-icon-144x144.png?<?php echo($TB['version']) ?>">
 		<?PHP
 			echo($settings['analyticsCode']);
 			if(isset($GardenWolf)){
@@ -115,11 +115,11 @@
 				}
 			}
 		?>
-		<script src="./system/jScripts/consoleWarning.js"></script>
+		<script src="./system/jScripts/consoleWarning.js?<?php echo($TB['version']) ?>"></script>
 	</head>
 	<body>
 		<div id="loadingOver" style="height:100%;width:100%;background:#354d5b;position:fixed;top:0px;left:0px;z-index:9999999999;"><div style="position:fixed;top:50%;left:50%;margin-left:-100px;margin-top:-100px;"><div class='uil-squares-css' style='transform:scale(0.4);'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div></div>
-		<script src="./system/jScripts/popup.js"></script>
+		<script src="./system/jScripts/popup.js?<?php echo($TB['version']) ?>"></script>
 		<a href="./?admin"><img src="./data/logo/favicon-96x96.png" id="icon" alt="Site Icon"/></a>
 		<div id="nav">
 			<div id="nav-navigation">
@@ -134,7 +134,7 @@
 			<a href="./?admin&page=file_manager"><div class="nav_Files">Files</div></a>
       <a href="./?admin&logout"><div>Logout</div></a>');
       
-      			echo('<script src="./system/jScripts/keepalive.js"></script>');
+      			echo('<script src="./system/jScripts/keepalive.js?'.$TB['version'].'"></script>');
 					}else{
 						echo('<a href="./"><div>Back to site</div></a>
       <a href="./?admin"><div class="nav_Login">Login</div></a>');
@@ -142,8 +142,8 @@
 				?>
 			</div>
 		</div>
-		<script src="./system/jScripts/alert.js"></script>
-		<script src="./system/jScripts/moveBackground.js"></script>
+		<script src="./system/jScripts/alert.js?<?php echo($TB['version']) ?>"></script>
+		<script src="./system/jScripts/moveBackground.js?<?php echo($TB['version']) ?>"></script>
 			<?PHP
 				//this is the banner for the messages.
 				if(isset($_GET['MSGBanner'])){
