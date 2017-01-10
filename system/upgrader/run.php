@@ -14,7 +14,5 @@
 	fwrite($dataVersionFile, "<?php\n\$dataVersion=".$TB['version'].";\n?>");
 	fclose($dataVersionFile);
 	
-	sleep(2); //HACKHACKHACK
-	
 	header('location: ./');
 ?>
