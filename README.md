@@ -7,11 +7,11 @@
 
 ##Latest Hotfixes
 ###v1.02
-1. Added a sleep arg in (system/upgrader/run.php)[https://github.com/GardenWolfGroup/Tailbone/blob/master/system/upgrader/run.php] to prevent "Redirected too many times" issue.
-2. Removed the board from (sytem/admin/sys/pages/loggedin.php)[https://github.com/GardenWolfGroup/Tailbone/blob/master/system/admin/sys/pages/loggedin.php] and replaced it with simple version checker
+1. Added a sleep arg in [system/upgrader/run.php](https://github.com/GardenWolfGroup/Tailbone/blob/master/system/upgrader/run.php) to prevent "Redirected too many times" issue.
+2. Removed the board from [sytem/admin/sys/pages/loggedin.php](https://github.com/GardenWolfGroup/Tailbone/blob/master/system/admin/sys/pages/loggedin.php) and replaced it with simple version checker
       
 ###v1.01
-Updated (system/installer/sys/submit.php)[https://github.com/GardenWolfGroup/Tailbone/blob/master/system/installer/sys/submit.php] file so that the "construction" variable is defined after Tailbone installation.
+Updated [system/installer/sys/submit.php](https://github.com/GardenWolfGroup/Tailbone/blob/master/system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
 
 ##General Information
 Tailbone is a software for Web servers to use, this is designed for \*NIX Servers, Windows Server DOESN'T WORK with Tailbone at all!
