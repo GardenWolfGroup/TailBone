@@ -1,11 +1,13 @@
 #[Tailbone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
-1. [Latest hotfixes](#latest-hotfixes)
+1. [Latest Versions](#latest-versions)
+  1. [v1.02](v102)
+  2. [v1.01](v101)
 2. [General Information](#general-information)
 3. [Features](#features)
 4. [Installation](#installation)
 
-##Latest Hotfixes
+##Latest Versions
 ###v1.02
 1. Added a sleep arg in [system/upgrader/run.php](https://github.com/GardenWolfGroup/Tailbone/blob/master/system/upgrader/run.php) to prevent "Redirected too many times" issue.
 2. Removed the board from [sytem/admin/sys/pages/loggedin.php](https://github.com/GardenWolfGroup/Tailbone/blob/master/system/admin/sys/pages/loggedin.php) and replaced it with simple version checker
