@@ -1,4 +1,4 @@
-#[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
+#[Tailbone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Latest hotfixes](#latest-hotfixes)
 2. [General Information](#general-information)
@@ -6,7 +6,12 @@
 4. [Installation](#installation)
 
 ##Latest Hotfixes
-v1.01 - Updated system/installer/sys/submit.php file so that the "construction" variable is defined after Tailbone installation.
+###v1.02
+1. Added a sleep arg in system/upgrader/run.php to prevent "Redirected too many times" issue.
+2. Removed the board from sytem/admin/sys/pages/loggedin.php and replaced it with simple version checker
+      
+###v1.01
+Updated system/installer/sys/submit.php file so that the "construction" variable is defined after Tailbone installation.
 
 ##General Information
 Tailbone is a software for Web servers to use, this is designed for \*NIX Servers, Windows Server DOESN'T WORK with Tailbone at all!
