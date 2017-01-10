@@ -33,3 +33,8 @@ Any questions regarding this software should be directed at [Toshi Bennett](mail
 2. Extract into target directory
 3. Make sure the permissions of the data directory are set corrently.
 4. Open the domain in a web browser and follow the on-page instructions
+
+##Upgrading
+1. Back up your install.
+2. Extract all contents of the TailBone zip except for the data folder to your install location.
+3. navigate to the website and TailBone will handle the rest.
