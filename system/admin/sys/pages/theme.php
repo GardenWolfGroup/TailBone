@@ -85,7 +85,7 @@
 	Content Background: <input class="jscolor fancy_input" type="text" name="contentBackground" value="<?PHP echo($contentBackground); ?>"><br>
 	Footer Background: <input class="jscolor fancy_input" type="text" name="enderBackground" value="<?PHP echo($enderBackground); ?>"><br>
 	<h2>--Custom--<h2></h2>
-	Custom CSS:<br>
+	Custom CSS:<sub>You can add @import codes here to include fonts from services like Google Fonts.</sub><br>
 	<textarea class="fancy_input" name="customCSS"><?PHP echo(file_get_contents('./data/custom.css')) ?></textarea><br>
 	<?PHP
 		if(isset($_GET['setDefault'])){
