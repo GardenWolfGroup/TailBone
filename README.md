@@ -1,12 +1,16 @@
 #[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
-1. [Latest hotfixes](#latest-hotfixes)
+1. [Latest Versions](#latest-versions)
 2. [General Information](#general-information)
 3. [Features](#features)
 4. [Installation](#installation)
 
-##Latest Hotfixes
-v1.01 - Updated [system/installer/sys/submit.php](system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
+##Latest Versions
+###v1.01  
+Updated [system/installer/sys/submit.php](system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
+
+###v1.0 (Curious Corgi) 
+The intial release of Tailbone.
 
 ##General Information
 Tailbone is a software for Web servers to use, this is designed for \*NIX Servers,	 Windows Server DOESN'T WORK with Tailbone at all!
