@@ -18,7 +18,7 @@ ALL INDEX FILES (except the one in root) are pointing to one file for less redun
 
 Added the Tailbone codename var to [index.php](index.php)
 
-Added version vars at the end of file names to avoid caching probles between version changes in [system/main/run.php](system/main/run.php), [system/admin/run.php](system/admin/run.php), and [system/installer/sys/install.php](system/installer/sys/install.php)
+Added version vars at the end of file names to avoid caching problems between version changes in [system/main/run.php](system/main/run.php), [system/admin/run.php](system/admin/run.php), and [system/installer/sys/install.php](system/installer/sys/install.php)
 
 Removed animations from (system/main/run.php)[system/main/run.php]
 
