@@ -1,4 +1,4 @@
-#[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
+#[Tailbone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Latest Versions](#latest-versions)
 	1. [v1.02 Intent Corgi](v102-intent-corgi)
@@ -11,12 +11,19 @@
 ##Latest Versions
 ###v1.02 (Intent Corgi)
 Added a sleep arg to [system/upgrader/run.php](system/upgrader/run.php) to avoid "Redirected too many times" issue.
+
 Removed the board from [system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php) and replaced it with a simple version checker.  Echoes the Tailbone codename as well.
+
 ALL INDEX FILES (except the one in root) are pointing to one file for less redundancy
+
 Added the Tailbone codename var to [index.php](index.php)
+
 Added version vars at the end of file names to avoid caching probles between version changes in [system/main/run.php](system/main/run.php), [system/admin/run.php](system/admin/run.php), and [system/installer/sys/install.php](system/installer/sys/install.php)
+
 Removed animations from (system/main/run.php)[system/main/run.php]
+
 Removed system/main/theme/animations.css as it is no longer needed.
+
 Updated [contributors](contributors.md), also changed file format from txt to md.
 
 ###v1.01 (Tentative Corgi)  
