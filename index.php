@@ -15,6 +15,7 @@
 		session_unset();     // unset $_SESSION variable for the run-time
 		session_destroy();   // destroy session data in storage
 	}
+	
 	$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 	
 	$hosted = false;
@@ -24,6 +25,7 @@
 	}
 	
 	$TB['version'] = 1.02;
+	$TB['codeName'] = "Intent Corgi";
 	$runningInIndex = true; //Tells scripts that they are running in the index as they should be.
 	
 	if(file_exists('./data/dataVersion.php')){
