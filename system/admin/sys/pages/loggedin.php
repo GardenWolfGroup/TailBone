@@ -33,7 +33,7 @@
   <div style="text-align:center;">
     <h2>Welcome back, '.ucfirst($_SESSION['user']).'.</h2>
 		<script src="//tb-s.gardenwolf.com/version.php"></script>
-		<p>You are using TailBone '.$TB['version'].'.</p>
+		<p>You are using TailBone '.$TB['version'].'.<br>Code Name: '.$TB['codeName'].'</p>
 		'.$extraContnet.'
   </div>
   ';
