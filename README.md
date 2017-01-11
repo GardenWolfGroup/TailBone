@@ -1,12 +1,14 @@
 #[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Latest Versions](#latest-versions)
+	1. [v1.01](#v101-tenative-corgi)
+	2. [v1.0 Curious Corgi](#v10-curious-corgi)
 2. [General Information](#general-information)
 3. [Features](#features)
 4. [Installation](#installation)
 
 ##Latest Versions
-###v1.01  
+###v1.01 (Tentative Corgi)  
 Updated [system/installer/sys/submit.php](system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
 
 ###v1.0 (Curious Corgi) 
