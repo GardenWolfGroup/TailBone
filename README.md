@@ -1,4 +1,4 @@
-#[Tailbone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
+#[TailBone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Latest Versions](#latest-versions)
 	1. [v1.02 Intent Corgi](v102-intent-corgi)
