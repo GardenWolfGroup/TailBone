@@ -1,7 +1,7 @@
 #[Tailbone Website Software v1.01](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Latest Versions](#latest-versions)
-	1. [v1.01](#v101-tenative-corgi)
+	1. [v1.01 Tentative Corgi](#v101-tentative-corgi)
 	2. [v1.0 Curious Corgi](#v10-curious-corgi)
 2. [General Information](#general-information)
 3. [Features](#features)
