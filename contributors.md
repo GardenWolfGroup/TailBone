@@ -1,7 +1,7 @@
 #Contributors to Tailbone
 ##Developers
 ###[Cody Paul Brian](mailto:cody@gardenwolf.com "Cody's Email")
-1. Pretty much everything except for a few file manager bits.  
+1. Pretty much everything except for a few file manager bits.
 ###[Keith (Toshi, Toshib_htr)](mailto:toshi@gardenwolf.com "Toshi's Email")
 1. File uploads.
 2. Subdirectories in the uploads.
