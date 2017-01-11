@@ -58,12 +58,6 @@
 	}
 	
 	$siteTitle = $settings['siteName'].' | '.$pageName;
-	if(isset($_SESSION['animationsSeen']) && $_SESSION['animationsSeen'] == 'true'){
-		$animate = 'false';
-	}else{
-		$animate = 'true';
-	}
-	$_SESSION['animationsSeen'] = 'true';
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,12 +70,6 @@
 		<link rel="stylesheet" href="./system/main/theme/main.css?<?php echo($TB['version']) ?>" type="text/css">
 		<?PHP
 			include('./system/main/theme/colours.Scss.php'); //because why the fuck not...
-			if(isset($_GET['anim'])){
-				$animate='true';
-			}
-			if($animate == 'true'){
-				echo('<link rel="stylesheet" href="./system/main/theme/animations.css" type="text/css">');
-			}
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=0.75, minimum-scale=0.75, user-scalable=no"/>
 		<link rel="apple-touch-icon" sizes="57x57" href="./data/logo/apple-icon-57x57.png?<?php echo($TB['version']) ?>">
