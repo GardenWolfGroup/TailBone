@@ -8,15 +8,19 @@
 	
 	//See previous comment, a piece of code just in case (paranoid Cody)
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	
 	session_start();
 	
 	//Makes sure that the user wasn't a URL copying pain in the butt and actually is logged into the system
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
 	
@@ -69,6 +73,8 @@
 	fwrite($content,$_POST['analyticsCode']);
 	fclose($content);
 	
-	header('location:./?admin&MSGBanner=Successfully edited settings.&page=settings&MSGType=1');
+	$_SESSION['MSGBanner'] = 'Successfully edited settings.';
+	$_SESSION['MSGType'] = 1;
+	header('location:./?admin&page=settings');
 	die();
 ?>
