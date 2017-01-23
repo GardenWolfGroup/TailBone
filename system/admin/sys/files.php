@@ -8,15 +8,19 @@
 	
 	//Paranoid Cody
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	
 	session_start();
 	
 	//No URL copying pains allowed here!
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
 	
@@ -53,24 +57,32 @@
 			
 			//Check to see if the max post size is larger than the uploaded size
 			if($_SERVER['CONTENT_LENGTH'] > $size){
-					header("location:./?admin&page=file_manager&MSGBanner=ERROR! File too large!&MSGType=2");
-					die();
+				$_SESSION['MSGBanner'] = 'Error, file too large.';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
+				die();
 			}
 			
 			//Make sure the file has a name
 			if(sizeof($_FILES['fileUp']['name']) == 0){
-				header("location:./?admin&page=file_manager&MSGBanner=ERROR!  The file isn't valid! Check the name and size of the file!&MSGType=2");
+				$_SESSION['MSGBanner'] = 'Error, the file is not valid.';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
 			if(!$valid){
-				header("location:./?admin&page=file_manager&MSGBanner=The file you uploaded isn't valid, upload images only!&MSGType=2");
+				$_SESSION['MSGBanner'] = 'Error, the file is not valid. Upload images only.';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
 			//Make sure that the file doesn't exist already
 			if(file_exists($target)){
-				header("location:./?admin&page=file_manager&MSGBanner=ERROR! ".$_FILES['fileUp']['name']." already exists!&MSGType=2");
+				$_SESSION['MSGBanner'] = 'Error, the file "'.$_FILES['fileUp']['name'].'" already exists.';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
@@ -79,12 +91,16 @@
 			
 			//Check to make sure it moved, otherwise the perms must be messed up
 			if(!file_exists($target)){
-				header("location:./?admin&page=file_manager&MSGBanner=ERROR! Something weird happened to your upload! Check your perms!&MSGType=3");
+				$_SESSION['MSGBanner'] = 'Error, please check your permisions.';
+				$_SESSION['MSGType'] = 3;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
 			//Leave
-			header("location:./?admin&page=file_manager&MSGBanner=Upload Successful!&MSGType=1");
+			$_SESSION['MSGBanner'] = 'Uploaded successfully!';
+			$_SESSION['MSGType'] = 1;
+			header("location:./?admin&page=file_manager");
 			die();
 		break;
 		
@@ -97,7 +113,9 @@
 			
 			//Remove the file and flee!
 			unlink($fileToDelete);
-			header("location:./?admin&page=file_manager&MSGBanner=File Deleted!&MSGType=1");
+			$_SESSION['MSGBanner'] = 'File deleted.';
+			$_SESSION['MSGType'] = 1;
+			header("location:./?admin&page=file_manager");
 			die();
 		break;
 		
@@ -108,12 +126,16 @@
 			
 			//Check for the folder
 			if(file_exists("./data/upload/".$dirName)){
-				header("location:./?admin&page=file_manager&MSGBanner=The Folder ".$dirName." Exists!&MSGType=2");
+				$_SESSION['MSGBanner'] = 'The folder "'.$dir.'" already exists.';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
 			mkdir("./data/upload/".$dirName);
-			header("location:./?admin&page=file_manager&MSGBanner=Folder Created!&MSGType=1");
+			$_SESSION['MSGBanner'] = 'Folder created!';
+			$_SESSION['MSGType'] = 1;
+			header("location:./?admin&page=file_manager");
 			die();
 		break;
 		
@@ -125,7 +147,9 @@
 			 * Even though the file_manager.php should tell the user to clear the folder out before deleting it!
 			 */
 			if(count(scandir($folder)) > 2){
-				header("location:./?admin&page=file_manager&MSGBanner=The Folder ". $_GET['file']." still has files! Remove them in order to delete this folder!&MSGType=2");
+				$_SESSION['MSGBanner'] = 'The folder "'.$_GET['file'].'" still has files in it. Please remove them first!';
+				$_SESSION['MSGType'] = 2;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
@@ -133,13 +157,17 @@
 			rmdir($folder);
 			
 			if(!file_exists($folder)){
-				header("location:./?admin&page=file_manager&MSGBanner=Folder Deleted!&MSGType=1");
+				$_SESSION['MSGBanner'] = 'Folder deleted!';
+				$_SESSION['MSGType'] = 1;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 			
 			//Otherwise the perms are probably messed up
 			else{
-				header("location:./?admin&page=file_manager&MSGBanner=Folder wasn't deleted, check your perms!&MSGType=3");
+				$_SESSION['MSGBanner'] = 'Could not delete folder. Please check permissions.';
+				$_SESSION['MSGType'] = 3;
+				header("location:./?admin&page=file_manager");
 				die();
 			}
 	}
