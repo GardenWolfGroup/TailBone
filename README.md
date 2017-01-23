@@ -1,4 +1,4 @@
-#[TailBone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
+#[TailBone Website Software v2.0](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Version History](#version-history)
 	1. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
