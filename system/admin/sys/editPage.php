@@ -7,15 +7,19 @@
 	
 	//Cody being even more paranoid
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	
 	session_start();
 	
 	//Make sure that there is a user, not one of those URL copiers....
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
 	
@@ -39,14 +43,18 @@
 		
 		//Otherwise BACK TO THE ADMIN PANEL YOU GO!
 		else{
-			header('location:./?admin&MSGBanner=Page edited successfully!&page=pages&MSGType=1');
+			$_SESSION['MSGBanner'] = 'Successfully edited the page.';
+			$_SESSION['MSGType'] = 1;
+			header('location:./?admin&page=pages');
 			die();
 		}
 	}
 	
 	//If this triggered something went kaboom
 	else{
-		header('location:./?admin&MSGBanner=Error! Check perms!&MSGType=3');
+		$_SESSION['MSGBanner'] = 'Error, please check permissions.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin&page=pages');
 		die();
 	}
 ?>
