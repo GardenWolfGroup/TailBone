@@ -22,6 +22,9 @@ body {
 #content *{
   max-width:100%;
 }
+#content img{
+  height:initial!important;
+}
 #topper {
     height: 40px;
     width: calc(100% + 20px);
