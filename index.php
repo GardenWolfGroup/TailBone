@@ -9,23 +9,68 @@
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
-	ini_set('default_socket_timeout', 20);
-	
-	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 600)) {
-		session_unset();     // unset $_SESSION variable for the run-time
-		session_destroy();   // destroy session data in storage
-	}
-	
-	$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
-	
+
 	$hosted = false;
 	if(file_exists('/var/GWG/webInit.php')){
 		require('/var/GWG/webInit.php');
 		$hosted = true;
 	}
 	
-	$TB['version'] = 1.02;
-	$TB['codeName'] = "Intent Corgi";
+	$loggedin = false;
+	
+	function checkLogin(){
+		session_start();
+		
+		global $loggedin;
+		
+		if(isset($_GET['logout'])){
+			session_unset();
+			session_destroy();
+		}
+		
+		global $hosted;
+		require('./data/users.php');
+		if($hosted){
+			global $serverVars;
+			$users[$serverVars['serverAdmin']] = $serverVars['serverAdminPass'];
+		}
+		if(isset($_SESSION['loggedin'])){
+			if(isset($_SESSION['user'])){
+				if(isset($users[$_SESSION['user']])){
+					return true;
+					$loggedin = true;
+					$_SESSION['keepAlive'] += 1;
+				}else{
+					session_unset();
+					session_destroy();
+					session_start();
+					return false;
+				}
+			}else{
+				session_unset();
+				session_destroy();
+				session_start();
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+	
+	function getUsers(){
+		global $loggedin;
+		if($loggedin){
+			require('./data/users.php');
+			$return = array();
+			foreach($users as $user => $user){ //bit of a hack..
+				array_push($return, $user);
+			}
+			return $return;
+		}
+	}
+	
+	$TB['version'] = 2.0;
+	$TB['codeName'] = "Punctual Penguin";
 	$runningInIndex = true; //Tells scripts that they are running in the index as they should be.
 	
 	if(file_exists('./data/dataVersion.php')){
@@ -38,6 +83,8 @@
 		$upgrading = true;
 		require('./system/upgrader/run.php');
 	}
+	
+	//A coffee maker was killed in the making of the program.
 	
 	if(file_exists('installed')){ //checks to make sure TailBone is in fact installed.
 		if(isset($_GET['admin'])){ //has the user requested the admin pannel?
