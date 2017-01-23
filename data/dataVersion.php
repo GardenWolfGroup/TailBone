@@ -1,3 +1,3 @@
 <?php
-$dataVersion=1.02;
+$dataVersion=2.0;
 ?>
