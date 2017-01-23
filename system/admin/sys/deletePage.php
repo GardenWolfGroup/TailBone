@@ -4,14 +4,18 @@
 		die('403 FORBIDDEN: You are not allowed to access that file outside its normal running location.');
 	}
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	session_start();
 	
 	//Make sure that the user has been logged in
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
 	
@@ -24,13 +28,17 @@
 	
 	//If the page doesn't exist anymore, display the success message
 	if(!file_exists($location)){
-		header('location:./?admin&MSGBanner=Page deleted.&page=pages&MSGType=1');
+		$_SESSION['MSGBanner'] = 'Successfully deleted the page.';
+		$_SESSION['MSGType'] = 1;
+		header('location:./?admin&page=pages');
 		die();
 	}
 	
 	//Otherwise something went kaboom
 	else{
-		header('location:./?admin&MSGBanner=Error! Check perms!&page=pages&MSGType=3');
+		$_SESSION['MSGBanner'] = 'Error, please check permissions.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin&page=pages');
 		die();
 	}
 ?>
