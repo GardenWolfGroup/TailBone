@@ -18,7 +18,7 @@
 <!-- File Upload Form -->
 <form id="uploader" action="./?admin&request&action=files&type=upload" method="POST" enctype="multipart/form-data">
 	
-	<!-- Directory Chooser (Doesn't display subdirectories of subdirectories -->
+	<!-- Directory Chooser (Doesn't display subdirectories of subdirectories) <-- Really?  Nobody caught the unclosed parens? GAH -->
 	<select class="fancy_input" id="dirUploadChooser" name="directory">
 		Upload to folder:<option value="">Home</option>
 		
@@ -43,7 +43,7 @@
 </form>
 <?php
 	$spacePercent = round(disk_free_space('/')/disk_total_space('/'),2)*100;
-	echo('<p>Space left:</p><div style="background:#'.$themeColours['bodyBackground'].';width:600px; max-width:90%; padding:6px;"><div style="background:#'.$themeColours['contentBackground'].'; width:'.$spacePercent.'%;text-align:center; overflow:hidden;">'.$spacePercent.'%</div></div>');
+	echo('<p>Space left:</p><div style="background:#'.$theme['bodyBackground'].';width:600px; max-width:90%; padding:6px;"><div style="background:#'.$theme['contentBackground'].'; width:'.$spacePercent.'%;text-align:center; overflow:hidden;">'.$spacePercent.'%</div></div>');
 ?>
 
 <h2>--Make a folder--</h2>
@@ -56,7 +56,7 @@
 	//Placed in a function for recursive folder reading, however the divs echoed from the function aren't built for more than 1 subdirectory as of the current time
 	function parseDir($uploadedFiles, $subFilePath = "", $current = "./data/upload/", $subDirPath = ""){
 		
-		global $themeColours;
+		global $theme;
 		
 		//Boolean value that's useful for ifs and tetriary operators
 		$inSubDir = ($subFilePath != "");
@@ -88,19 +88,19 @@
 							//Change the delete params
 								$delPopupPrams = "'Delete','Are you sure you want to delete that folder?<br>".$uF."','Yes','./?admin&request&action=files&type=fdelete&file=".$subFilePath.$uF."'";
 							}
-							echo('<div style="background-color:#'.$themeColours['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.' (Folder)</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
+							echo('<div style="background-color:#'.$theme['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.' (Folder)</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
 							
 							//Go into the directory
 							parseDir(scandir($current.$uF."/"), $currentFile, $current.$uF."/", $subDirPath.$uF.'/');
 						}
 						
 						else if(!$inSubDir){
-							echo('<div style="background-color:#'.$themeColours['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
+							echo('<div style="background-color:#'.$theme['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
 						}
 						
 						else{
 							//Give the subdirectory files a special class for indentation, which makes them easier to identify
-							echo('<div class="subDir" style="background-color:#'.$themeColours['bodyBackground'].';margin-bottom:50px;width: 97%;position: relative;right: 0;left: 3%;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
+							echo('<div class="subDir" style="background-color:#'.$theme['bodyBackground'].';margin-bottom:50px;width: 97%;position: relative;right: 0;left: 3%;"><p style="line-height:40px;margin-bottom:-40px;">'.$currentFile.'. '.$uF.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a><a onclick="CopyLink('.$copyLinkPrams.')" class="abtn_blue" alt="Copy link">Copy link</a><a onclick="viewFile('.$copyLinkPrams.')" class="abtn_blue" alt="view">View</a></div></div>');
 						}
 				}
 			}
@@ -118,7 +118,7 @@
 <!-- Popups for files -->
 <script>
 	//Inital popup setup
-	document.write ('<div id="viewer" style="display:none;position:fixed;top:5%;height:75%;left:5%;width:90%;margin:auto;text-align:center;background-color:#587C8C;padding:0px;z-index:9999;color:white;box-shadow: 11px 13px 47px -1px rgba(0,0,0,0.57);"><div style="height:40px;width;100%;background-color:#429A86;padding:0px;margin-top:-22px;"><div id="closePopup" onclick="closeViewer()">X</div><h1 id="viewerTitle"></h1></div><iframe id="frameView" style="width:98%; padding-left:1%; padding-right:1%;" frameborder="0"></iframe></div>');
+	document.write ('<div id="viewer" style="display:none;position:fixed;top:5%;height:75%;left:5%;width:90%;margin:auto;text-align:center;background-color:#587C8C;padding:0px;z-index:9999;color:white;box-shadow: 11px 13px 47px -1px rgba(0,0,0,0.57);"><div style="height:40px;width;100%;background-color:#429A86;padding:0px;margin-top:-22px;"><div id="closePopup" onclick="closeViewer()">X</div><h1 id="viewerTitle" style="max-width:calc(100% - 40px); overflow:hidden;"></h1></div><div style="width:100%; height:calc(100% - 40px); overflow-y:scroll;"><img id="frameView" style="max-width:98%; padding-left:1%; padding-right:1%;" src=""/></div></div>');
 	
 	function CopyLink(file){
 		popup('Copy','Highlight and copy the following to use on your site:<br><input class="fancy_input" onClick="this.select();" value="./data/upload/'+file+'">','Thanks',window.location.href);
