@@ -6,20 +6,24 @@
 	}
 	
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	
 	session_start();
 	
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
 	
 	$write='
 <?PHP 
-	$themeColours = array(
+	$theme = array(
 		"bodyBackground" => "'.$_POST["bodyBackground"].'",
 		"bodyBackgroundImage" => "'.$_POST["bodyBackgroundImage"].'",
 		"bodyBackgroundRepeat" => "'.$_POST["bodyBackgroundRepeat"].'",
@@ -38,7 +42,7 @@
 	';
 	
 	//Get the config file and write the new stuff to it
-	$location = './data/colours.php';
+	$location = './data/theme.php';
 	$content = fopen($location,'w');
 	fwrite($content,$write);
 	fclose($content);
@@ -49,7 +53,9 @@
 	
 	//Make sure it is what we set it to, otherwise KABOOM!
 	if($check != $write){
-		header('location:./?admin&page=theme&MSGBanner=Error editing theme.&MSGType=3');
+		$_SESSION['MSGBanner'] = 'Error editing theme. Please check permissions.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin&page=theme');
 		die();
 	}
 	
@@ -62,11 +68,15 @@
 	//And make sure that the content we sent has been written
 	$check = file_get_contents('./data/custom.css');
 	if($check != $write){
-		header('location:./?admin&page=theme&MSGBanner=Error editing theme.&MSGType=3');
+		$_SESSION['MSGBanner'] = 'Error editing theme. Please check permissions.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin&page=theme');
 		die();
 	}
 	
 	//Otherwise everything's fine!
-	header('location:./?admin&page=theme&MSGBanner=Successfully edited theme.&MSGType=1');
+	$_SESSION['MSGBanner'] = 'Successfully edited theme.';
+		$_SESSION['MSGType'] = 1;
+		header('location:./?admin&page=theme');
 	die();
 ?>
