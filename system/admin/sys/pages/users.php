@@ -14,7 +14,7 @@
 		*/
 		if($hosted && $_SESSION['user'] == $serverVars['serverAdmin']){
 			echo('<select id="userName" name="user" class="fancy_input">');
-			foreach($users as $key => $value){
+			foreach(getUsers() as $key => $value){
 				if($key != $serverVars['serverAdmin']){
 					echo('<option value="'.$key.'">'.ucfirst($key).'</option>');
 				}
@@ -41,18 +41,13 @@
 			$userNum = 0;
 			
 			//checking to see if TailBone is on a server for TB. If it is, make sure the server admin is not displayed in the user selector.
-			if($hosted){
-				$spare = $serverVars['serverAdmin'];
-			}else{
-				$spare = "";//HACKHACKHACK
-			}
-			foreach($users as $key => $value){
-				if($key != $_SESSION['user'] && $key != $spare){
+			foreach(getUsers() as $key){
+				if($key != $_SESSION['user']){
 					$userNum += 1;//just counting up.
 					//setting the arguments for the delete popup.
 					$delPopupPrams = "'Delete','Are you sure you want to delete the user ".$key."?','Yes','./?admin&request&action=users&intent=delete&user=".$key."'";
 					//shows the users.
-					echo('<div style="background-color:#'.$themeColours['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;margin-left:5px;">'.$userNum.'. '.$key.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a></div></div>');
+					echo('<div style="background-color:#'.$theme['bodyBackground'].';margin-bottom:50px;"><p style="line-height:40px;margin-bottom:-40px;margin-left:5px;">'.$userNum.'. '.$key.'</p><div style="float:right;margin:5px;"><a onclick="popup('.$delPopupPrams.')" class="abtn_blue" style="display:inline-block;" alt="Delete file">Delete</a></div></div>');
 				}
 			}
 		?>
