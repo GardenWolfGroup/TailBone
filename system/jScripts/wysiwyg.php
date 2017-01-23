@@ -1,6 +1,6 @@
 <?php
 	header('Content-Type: text/javascript');
-	require('../../data/colours.php');
+	require('../../data/theme.php');
 ?>
 tinymce.init({
 	selector:'.WYSIWYG',
@@ -11,5 +11,5 @@ tinymce.init({
 	toolbar2: "forecolor backcolor | font",
 	entity_encoding : "named",
 	browser_spellcheck: true,
-	content_style: "html body {background-color:#<?php echo($themeColours['contentBackground']); ?>;color:#<?php echo($themeColours['contentText']) ?>;}",
+	content_style: "html body {background-color:#<?php echo($theme['contentBackground']); ?>;color:#<?php echo($theme['contentText']) ?>;}",
 });
