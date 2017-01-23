@@ -1,14 +1,93 @@
 #[TailBone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
-1. [Latest Versions](#latest-versions)
-	1. [v1.02 Intent Corgi](v102-intent-corgi)
-	2. [v1.01 Tentative Corgi](#v101-tentative-corgi)
-	3. [v1.0 Curious Corgi](#v10-curious-corgi)
+1. [Version History](#version-history)
+	1. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
+	2. [v1.02 Intent Corgi](#v102-intent-corgi)
+	3. [v1.01 Tentative Corgi](#v101-tentative-corgi)
+	4. [v1.0 Curious Corgi](#v10-curious-corgi)
 2. [General Information](#general-information)
 3. [Features](#features)
 4. [Installation](#installation)
 
-##Latest Versions
+##Version History
+###v2.0 (Punctual Penguin)
+[system/admin/run.php](system/admin/run.php)
+-Updated to use the new theme file.
+-Added MSGBanner.js script.
+-Added the version tags to prevent "bad cache".
+-Removed the strange page reg thing I did...
+-Fixed a session timeout issue.
+-New MSGBanner script.
+
+[system/admin/sys/editTheme.php](system/admin/sys/editTheme.php) - Updated to use the new theme file.
+
+[system/admin/sys/pages/theme.php](system/admin/sys/pages/theme.php) - Updated to use the new theme file.
+
+[system/main/theme/theme.php](system/main/theme/theme.php)
+--REPLACES themeColours.scss.php thing...
+
+[system/main/theme/animations.css](system/main/theme/animations.css)
+--ADDED
+
+[data/theme.php](data/theme.php)
+--REPLACES colours.php
+
+[system/jScipts/loading.js](system/jScipts/loading.js) - Removed MSGBanner parts.
+
+[system/jScipts/MSGBanner.js](system/jScipts/MSGBanner.js)
+--NEW: Contains the click to close and the timeout.
+
+[system/main/run.php](system/main/run.php)
+-Updated to use the new theme file.
+-Updated to report 404 as a header.
+-Updated to make edit button direct to settings when a 404 has occurred.
+-Added the MSGBanner.js script.
+-Added the version tags to prevent "bad cache".
+-Fixed a session timeout issue.
+-New MSGBanner script.
+-Re-added the animations.
+-No longer requiring file. Only echoing its contents. (More secure and prevents scripts from running.)
+
+[system/installer/sys/install.php](system/installer/sys/install.php)
+-Updated to use the new theme file.
+-Added the version tags to prevent "bad cache".
+
+[system/jScripts/wysiwyg.php](system/jScripts/wysiwyg.php) - Updated to use the new theme file.
+
+[system/installer/sys/sumbit.php](system/installer/sys/sumbit.php) - Fixed MSGBanner parameters.
+
+[system/upgrader/run.php](system/upgrader/run.php) - Updated to edit data folder colours.php to theme.php.
+
+[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php) - Updated to the new theme stuffs.
+
+[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php) - Re-arranged the buttons.
+
+system/admin/sys/pages/pages_*.php
+--REMOVED
+
+[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php) - Updated to contain ALL pages data.
+
+system/admin/sys/sys.pagereg.php
+--REMOVED
+
+[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php) - Updated to use new theme var.
+
+[system/admin/sys/*](system/admin/sys/) (excluding pages folder)
+-Updated to work with the new loggedin check.
+-Updated to use new MSGBanner.
+
+[index.php](index.php)
+-Added the new loggedin check.
+-Added getUsers() function.
+
+[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php) - Now uses the userList function.
+
+[system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php) -Added server admin email.
+
+[system/main/theme/main.css](system/main/theme/main.css) -Fixed stretched images issue.
+
+[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php) - Viewer is no longer a pesky iframe. It is a proper image viewer this time.
+
 ###v1.02 (Intent Corgi)
 Added a sleep arg to [system/upgrader/run.php](system/upgrader/run.php) to avoid "Redirected too many times" issue.
 
@@ -20,7 +99,7 @@ Added the Tailbone codename var to [index.php](index.php)
 
 Added version vars at the end of file names to avoid caching problems between version changes in [system/main/run.php](system/main/run.php), [system/admin/run.php](system/admin/run.php), and [system/installer/sys/install.php](system/installer/sys/install.php)
 
-Removed animations from (system/main/run.php)[system/main/run.php]
+Removed animations from [system/main/run.php](system/main/run.php)
 
 Removed system/main/theme/animations.css as it is no longer needed.
 
