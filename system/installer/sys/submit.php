@@ -63,5 +63,7 @@
 	fclose($currentFile);
 	
 	///END
-	header('location:./index.php?MSGBanner=Please delete the installer folder!');
+	$_SESSION['MSGBanner'] = 'Please delete the installer folder from ./system';
+	$_SESSION['MSGType'] = 2;
+	header('location: ./');
 ?>
