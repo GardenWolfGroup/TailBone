@@ -7,18 +7,24 @@
 	
 	//Cody is still being paranoid.
 	if(!$allowRequest){
-		header('location:./?admin&MSGBanner=Unknown error.');
+		$_SESSION['MSGBanner'] = 'Unknown error.';
+		$_SESSION['MSGType'] = 3;
+		header('location:./?admin');
 		die('403 FORBIDDEN: TailBone did not allow the requested action to be preformed.');
 	}
 	
 	session_start();
 	
 	//looks to see if the user is logged in.
-	if(!$_SESSION['loggedin']){
-		header('location:./?admin&MSGBanner=You must be logged in to do that!&MSGType=3');
+	if(!$loggedin){
+		$_SESSION['MSGBanner'] = 'You must be logged in to do that!';
+		$_SESSION['MSGType'] = 2;
+		header('location:./?admin');
 		die();
 	}
-
+	
+	require('./data/users.php');
+	
 	function writeUserData($messageOnCompletion){
 		//getting global vars.
 		global $users;
@@ -59,10 +65,14 @@
 		
 		//checks that the file was written correctly.
 		if($dataCheck == $data){
-			header('location:./?admin&MSGBanner='.$messageOnCompletion.'&page=users&MSGType=1');
+			$_SESSION['MSGBanner'] = $messageOnCompletion;
+			$_SESSION['MSGType'] = 1;
+			header('location:./?admin&page=users');
 			die();
 		}else{
-			header('location:./?admin&MSGBanner=Unknown error, please check perms.&page=users&MSGType=3');
+			$_SESSION['MSGBanner'] = 'Unknown error. Please check permissions.';
+			$_SESSION['MSGType'] = 3;
+			header('location:./?admin&page=users');
 			die();
 		}
 	}
@@ -92,7 +102,9 @@
 				writeUserData('Successfully changed '.ucfirst($user)."'s".' password!');
 			}else{
 				//failsafe to make sure the password ARE correct. this might come in handy if JS breaks. (I.E, IE happens.)
-				header('location:./?admin&MSGBanner=Passwords do not match.&page=users&MSGType=2');
+				$_SESSION['MSGBanner'] = 'Passwords do not match.';
+				$_SESSION['MSGType'] = 2;
+				header('location:./?admin&page=users');
 				die();
 			}
 		}else{
@@ -122,12 +134,16 @@
 					writeUserData('Successfully changed password!');
 				}else{
 					//same as before.
-					header('location:./?admin&MSGBanner=Passwords do not match.&page=users&MSGType=2');
+					$_SESSION['MSGBanner'] = 'Passwords do not match.';
+					$_SESSION['MSGType'] = 2;
+					header('location:./?admin&page=users');
 					die();
 				}
 			}else{
 				//oops, you forgot your password.
-				header('location:./?admin&MSGBanner=Old pass does not match current password.&page=users&MSGType=2');
+				$_SESSION['MSGBanner'] = 'Password entered does not match current password.';
+				$_SESSION['MSGType'] = 2;
+				header('location:./?admin&page=users');
 				die();
 			}
 		}
@@ -141,7 +157,10 @@
 		
 		if(isset($users[$_POST['name']])){
 			//does the user already exist?
-			header('location:./?admin&MSGBanner=The user "'.ucfirst($_POST['name']).'" already exists!&page=users&MSGType=2');
+			$_SESSION['MSGBanner'] = 'The user '.ucfirst($_POST['name']).' already exists!';
+			$_SESSION['MSGType'] = 2;
+			header('location:./?admin&page=users');
+			die();
 		}else{
 			//sets the user.
 			$users[$_POST['name']] = password_hash($_POST['pass'],PASSWORD_BCRYPT, $options);
@@ -152,6 +171,6 @@
 		//just get rid of the user.
 		unset($users[$_GET['user']]);
 		//we dont care, kick him out of the house!
-		writeUserData('Successfully deleted user "'.ucfirst($_GET['user']).'".&MSGType=1');
+		writeUserData('Successfully deleted user "'.ucfirst($_GET['user']).'"');
 	}
 ?>
