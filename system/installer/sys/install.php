@@ -14,29 +14,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>TailBone Installer</title>
-		<link rel="stylesheet" href="./system/main/theme/main.css" type="text/css">
-		<link rel="stylesheet" href="./system/main/theme/animations.css" type="text/css">
+		<link rel="stylesheet" href="./system/main/theme/main.css?<?php echo($TB['version']) ?>" type="text/css">
+		<link rel="stylesheet" href="./system/main/theme/animations.css?<?php echo($TB['version']) ?>" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=0.75, minimum-scale=0.75, user-scalable=no"/>
-		<link rel="apple-touch-icon" sizes="57x57" href="./data/logo/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="./data/logo/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="./data/logo/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="./data/logo/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="./data/logo/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="./data/logo/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="./data/logo/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="./data/logo/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="./data/logo/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="./data/logo/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./data/logo/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="./data/logo/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./data/logo/favicon-16x16.png">
-		<link rel="shortcut icon" href="./data/logo/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="./data/logo/favicon.ico" type="image/x-icon">
-		<meta name="msapplication-TileImage" content="./data/logo/ms-icon-144x144.png">
-		<?php include('./system/main/theme/colours.Scss.php'); ?>
+		<link rel="apple-touch-icon" sizes="57x57" href="./data/logo/apple-icon-57x57.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="60x60" href="./data/logo/apple-icon-60x60.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="72x72" href="./data/logo/apple-icon-72x72.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="76x76" href="./data/logo/apple-icon-76x76.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="114x114" href="./data/logo/apple-icon-114x114.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="120x120" href="./data/logo/apple-icon-120x120.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="144x144" href="./data/logo/apple-icon-144x144.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="152x152" href="./data/logo/apple-icon-152x152.png?<?php echo($TB['version']) ?>">
+		<link rel="apple-touch-icon" sizes="180x180" href="./data/logo/apple-icon-180x180.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="192x192"  href="./data/logo/android-icon-192x192.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="32x32" href="./data/logo/favicon-32x32.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="96x96" href="./data/logo/favicon-96x96.png?<?php echo($TB['version']) ?>">
+		<link rel="icon" type="image/png" sizes="16x16" href="./data/logo/favicon-16x16.png?<?php echo($TB['version']) ?>">
+		<link rel="shortcut icon" href="./data/logo/favicon.ico?<?php echo($TB['version']) ?>" type="image/x-icon">
+		<link rel="icon" href="./data/logo/favicon.ico?<?php echo($TB['version']) ?>" type="image/x-icon">
+		<meta name="msapplication-TileImage" content="./data/logo/ms-icon-144x144.png?<?php echo($TB['version']) ?>">
+		<?php include('./system/main/theme/theme.php'); ?>
 	</head>
 	<body>
-		<img src="./data/logo/favicon-96x96.png" id="icon" alt="Site Icon"/>
+		<img src="./data/logo/favicon-96x96.png?<?php echo($TB['version']) ?>" id="icon" alt="Site Icon"/>
 		<div id="nav">
 			<div id="nav-navigation">
 				<a href="#"><div class="nav_installing">Installer</div></a>
