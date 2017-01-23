@@ -17,7 +17,7 @@
 	//checks to see if the server is on a server whose purpose is to host TailBone sites.
 	if($hosted){
 		//shows the server name and ID at the bottom of the page.
-		$extraContnet = '<p>Server name: '.$serverVars['serverName'].'.<br>Server ID: '.$serverVars['serverID'].'.</p>';
+		$extraContnet = '<p>Server name: '.$serverVars['serverName'].'.<br>Server ID: '.$serverVars['serverID'].'.<br>Server admin: '.$serverVars['serverAdminEmail'].'</p>';
 	}else{
 		//Just here to avoid some errors. HACK HACK HACK
 		$extraContnet = '';
