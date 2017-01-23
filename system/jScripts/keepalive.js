@@ -10,7 +10,7 @@ function checkLoggedin(data){
 document.write('<iframe src="./index.php?admin&request&action=keepalive" onload="checkLoggedin(this.contentDocument.body.innerHTML);" id="keepSessionAlive" style="display:none;"></iframe>');
 window.setInterval(function(){
   keepAlive();
-}, 30000);
+}, 60000);
 							
 function keepAlive() {
 	console.log("%c Keeping session alive.",consoleVars);
