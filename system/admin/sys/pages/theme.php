@@ -23,20 +23,19 @@
 		$customFont = '';
 	}else{
 		//if not, well... you get the point...
-		require('./data/colours.php');
-		$bodyBackground = $themeColours["bodyBackground"];
-		$bodyBackgroundImage = $themeColours["bodyBackgroundImage"];
-		$bodyBackgroundRepeat = $themeColours["bodyBackgroundRepeat"];
-		$navHighlightColour = $themeColours["navHighlightColour"];
-		$contentBackground = $themeColours["contentBackground"];
-		$contentText = $themeColours["contentText"];
-		$topperBackground = $themeColours["topperBackground"];
-		$topperText = $themeColours["topperText"];
-		$enderBackground = $themeColours["enderBackground"];
-		$navBackground = $themeColours["navBackground"];
-		$navText = $themeColours["navText"];
-		$fontFamily = $themeColours["fontFamily"];
-		$customFont = $themeColours["customFont"];
+		$bodyBackground = $theme["bodyBackground"];
+		$bodyBackgroundImage = $theme["bodyBackgroundImage"];
+		$bodyBackgroundRepeat = $theme["bodyBackgroundRepeat"];
+		$navHighlightColour = $theme["navHighlightColour"];
+		$contentBackground = $theme["contentBackground"];
+		$contentText = $theme["contentText"];
+		$topperBackground = $theme["topperBackground"];
+		$topperText = $theme["topperText"];
+		$enderBackground = $theme["enderBackground"];
+		$navBackground = $theme["navBackground"];
+		$navText = $theme["navText"];
+		$fontFamily = $theme["fontFamily"];
+		$customFont = $theme["customFont"];
 	}
 ?>
 <style>
