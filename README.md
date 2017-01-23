@@ -1,4 +1,4 @@
-#[TailBone Website Software v2.0](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
+#[TailBone Website Software v1.02](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Version History](#version-history)
 	1. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
@@ -38,19 +38,19 @@
 --NEW: Contains the click to close and the timeout.
 
 [system/main/run.php](system/main/run.php)
--Updated to use the new theme file.
--Updated to report 404 as a header.
--Updated to make edit button direct to settings when a 404 has occurred.
--Added the MSGBanner.js script.
--Added the version tags to prevent "bad cache".
--Fixed a session timeout issue.
--New MSGBanner script.
--Re-added the animations.
--No longer requiring file. Only echoing its contents. (More secure and prevents scripts from running.)
+-Updated to use the new theme file.  
+-Updated to report 404 as a header.  
+-Updated to make edit button direct to settings when a 404 has occurred.  
+-Added the MSGBanner.js script.  
+-Added the version tags to prevent "bad cache".  
+-Fixed a session timeout issue.  
+-New MSGBanner script.  
+-Re-added the animations.  
+-No longer requiring file. Only echoing its contents. (More secure and prevents scripts from running.)  
 
-[system/installer/sys/install.php](system/installer/sys/install.php)
--Updated to use the new theme file.
--Added the version tags to prevent "bad cache".
+[system/installer/sys/install.php](system/installer/sys/install.php)  
+-Updated to use the new theme file.  
+-Added the version tags to prevent "bad cache".  
 
 [system/jScripts/wysiwyg.php](system/jScripts/wysiwyg.php) - Updated to use the new theme file.
 
@@ -72,13 +72,13 @@ system/admin/sys/sys.pagereg.php
 
 [system/admin/sys/pages/users.php](system/admin/sys/pages/users.php) - Updated to use new theme var.
 
-[system/admin/sys/*](system/admin/sys/) (excluding pages folder)
--Updated to work with the new loggedin check.
--Updated to use new MSGBanner.
+[system/admin/sys/*](system/admin/sys/) (excluding pages folder)  
+-Updated to work with the new loggedin check.  
+-Updated to use new MSGBanner.  
 
-[index.php](index.php)
--Added the new loggedin check.
--Added getUsers() function.
+[index.php](index.php)  
+-Added the new loggedin check.  
+-Added getUsers() function.  
 
 [system/admin/sys/pages/users.php](system/admin/sys/pages/users.php) - Now uses the userList function.
 
