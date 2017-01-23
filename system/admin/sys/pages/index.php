@@ -1,2 +1,3 @@
 <?php
-	require('../../../index.php');
+	$dirLock = '../../../';
+	require($dirLock.'index.php');
