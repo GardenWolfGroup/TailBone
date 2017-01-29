@@ -1,8 +1,8 @@
 #[TailBone Website Software v2.0](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Version History](#version-history)
-	1. [v2.0 Punctual Penguin](#v20)
-	2. [v1.02 Intent Corgi](#v102)
+	1. [v2.0 Punctual Penguin](#v20-punctual-penguin)
+	2. [v1.02 Intent Corgi](#v102-intent-corgi)
 	3. [v1.01 Tentative Corgi](#v101-tentative-corgi)
 	4. [v1.0 Curious Corgi](#v10-curious-corgi)
 2. [General Information](#general-information)
@@ -10,9 +10,9 @@
 4. [Installation](#installation)
 
 ##Version History
-###v2.0
+###v2.0 Punctual Penguin
 <details>
-	<summary>Punctual Penguin</summary>
+	<summary>Changelog</summary>
 [system/admin/run.php](system/admin/run.php)  
 -Updated to use the new theme file.  
 -Added MSGBanner.js script.  
@@ -90,9 +90,9 @@ system/admin/sys/sys.pagereg.php
 
 [system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php) - Viewer is no longer a pesky iframe. It is a proper image viewer this time.
 </details>
-###v1.02 
+###v1.02 Intent Corgi
 <details>
-<summary>Intent Corgi</summary>
+<summary>Changelog</summary>
 Added a sleep arg to [system/upgrader/run.php](system/upgrader/run.php) to avoid "Redirected too many times" issue.
 
 Removed the board from [system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php) and replaced it with a simple version checker.  Echoes the Tailbone codename as well.
