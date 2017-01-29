@@ -1,7 +1,7 @@
 #[TailBone Website Software v2.0](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Version History](#version-history)
-	1. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
+	1. [v2.0 Punctual Penguin](#v20)
 	2. [v1.02 Intent Corgi](#v102-intent-corgi)
 	3. [v1.01 Tentative Corgi](#v101-tentative-corgi)
 	4. [v1.0 Curious Corgi](#v10-curious-corgi)
