@@ -10,8 +10,9 @@
 4. [Installation](#installation)
 
 ##Version History
+###v2.0
 <details>
-	<summary>###v2.0 (Punctual Penguin)</summary>
+	<summary>Punctual Penguin</summary>
 	[system/admin/run.php](system/admin/run.php)  
 	-Updated to use the new theme file.  
 	-Added MSGBanner.js script.  
