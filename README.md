@@ -90,7 +90,9 @@ system/admin/sys/sys.pagereg.php
 
 [system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php) - Viewer is no longer a pesky iframe. It is a proper image viewer this time.
 </details>
-###v1.02 (Intent Corgi)
+###v1.02 
+<detials>
+<summary>Intent Corgi</summary>
 Added a sleep arg to [system/upgrader/run.php](system/upgrader/run.php) to avoid "Redirected too many times" issue.
 
 Removed the board from [system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php) and replaced it with a simple version checker.  Echoes the Tailbone codename as well.
@@ -106,7 +108,7 @@ Removed animations from [system/main/run.php](system/main/run.php)
 Removed system/main/theme/animations.css as it is no longer needed.
 
 Updated [contributors](contributors.md), also changed file format from txt to md.
-
+</details>
 ###v1.01 (Tentative Corgi)  
 Updated [system/installer/sys/submit.php](system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
 
