@@ -1,0 +1,268 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-size: 12pt;
+    width: 100%;
+    height:100%;
+    margin: 0;
+    background-attachment:fixed;
+}
+
+#materialNotif{
+  min-height:100px;
+  width:400px;
+  max-width:96%;
+  background:white;
+  box-shadow: 0px 0px 31px -4px rgba(0,0,0,0.68);
+  padding:0px;
+  position:fixed;
+  bottom:10px;
+  right:2%;
+  color:grey;
+  overflow:hidden;
+  display:none;
+  z-index:99;
+}
+#mNIcon{
+  height:86px;
+  width:86px;
+  background:url('./icon/alert-octagon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:3px;
+  display:inline-block;
+  float:left;
+}
+#mNContent{
+  display:inline-block;
+  min-height:86px;
+  float:left;
+  max-width:50%;
+}
+#mNClose{
+  border-top:1px solid grey;
+  clear:both;
+  background-color:white;
+  display:block;
+  width:100%;
+  margin-top:8px;
+  margin-bottom:-5px;
+  cursor:pointer;
+  padding:8px;
+}
+#mNButton{
+  border-top:1px solid grey;
+  clear:both;
+  background-color:white;
+  width:100%;
+  margin-top:8px;
+  cursor:pointer;
+  margin-bottom:-8px;
+  padding:8px;
+  display:none;
+}
+#mNButton p{
+  margin:0;
+}
+#mNClose:hover,#mNButton:hover{
+  background:#e0e0e0;
+}
+#mNClose p{
+  margin:5px;
+}
+
+#content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    overflow:hidden;
+}
+#content *{
+  max-width:100%;
+}
+#content img{
+  height:initial!important;
+}
+#topper {
+    max-width:initial;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -31px;
+    margin-bottom: 10px;
+    text-align: center;
+    /*box-shadow: 0px -3px 39px 1px rgba(0,0,0,0.67);*/
+    box-shadow: 0px -10px 57px 1px rgba(0,0,0,0.67);
+
+}
+#ender {
+    max-width:initial;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 20px;
+    padding-bottom:10px;
+    margin-bottom: -36px;
+    box-shadow: inset 0px 19px 39px -28px rgba(0,0,0,0.67);
+}
+#icon {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 9999991;
+    width: 64px;
+    height: 64px;
+}
+@media only screen and (max-width: 600px) {
+    #icon {
+        display: none;
+    }
+}
+#MSG_Banner {
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: -21px;
+    padding: 0;
+    text-align: center;
+}
+#github{
+  margin: 0 auto;
+	min-height: 42px;
+	max-height: 42px;
+	min-width: 42px;
+	max-width: 42px;
+	background-image: url("./img/mark-github.svg");
+	background-repeat: no-repeat;
+	background-size: 42px 42px;
+}
+#github:hover{
+	background-image: url("./img/mark-github-blue.svg");
+}
+#nav {
+    width: 100%;
+    position: relative;
+    top: 0;
+    /*box-shadow:0px 5px 16px 2px rgba(50, 50, 50, 0.77);*/
+    position:fixed;
+    z-index:99;
+}
+#nav-navigation {
+    text-align: center;
+    max-width:80%;
+    margin:auto;
+}
+#nav-navigation div {
+    line-height: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+    /*box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);*/
+    background:rgba(255,255,255,0.05);
+}
+#nav-navigation a div {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: normal;
+    margin-top: 0px!IMPORTANT;
+    display: inline-block;
+    width: initial!IMPORTANT;
+    height: 43px!IMPORTANT;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 4px;
+    margin-bottom: 0;
+}
+#nav-navigation a {
+    text-decoration: none;
+}
+.fancy_input {
+    /*background: #354D5B;*/
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    margin: 3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.abtn_blue {
+    background-color: #354D5B;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    display: inline-block;
+    text-decoration: none;
+    width: initial;
+    color: white;
+    margin-left: 10px;
+    margin-left:10px;
+    cursor:pointer;
+}
+.abtn_blue:hover {
+    filter:brightness(1.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+.l_red {
+    color: red;
+}
+.l_green {
+    color: limegreen;
+}
+.l_yellow {
+    color: yellow;
+}
+.l_orange {
+    color: orange;
+}
+#adContent{
+	width:100%;
+}
+
+#editButton{
+  height:44px;
+  width:44px;
+  background-image:url('./icon/pencil.svg');
+  background-repeat:no-repeat;
+  background-position:center;
+  position:fixed;
+  top:20px;
+  right:1%;
+  border-radius:32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index:991;
+}
+#editButtonError{
+  height:44px;
+  width:44px;
+  background-image:url('./icon/eraser.svg');
+  background-repeat:no-repeat;
+  background-position:center;
+  position:fixed;
+  top:20px;
+  right:1%;
+  border-radius:32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index:991;
+}
+#editButtonError:hover{
+  filter:brightness(1.35);
+}
+#editButton:hover{
+  filter:brightness(1.35);
+}
+
+
+/*EASTER EGG*/
+#shh_its_a_secret{
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  height:30px;
+  width:30px;
+}
