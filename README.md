@@ -15,7 +15,7 @@
 ###v2.1 (Excitable Penguin)
 We updated things.
 <details>
-	<summary>###v2.0 (Punctual Penguin)</summary>
+<summary>###v2.0 (Punctual Penguin)</summary>
 	[system/admin/run.php](system/admin/run.php)  
 	-Updated to use the new theme file.  
 	-Added MSGBanner.js script.  
