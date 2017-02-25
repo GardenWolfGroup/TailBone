@@ -17,147 +17,147 @@ We updated things.
 
 ###v2.0 (Punctual Penguin)
 <details>
-	<summary>ChangeLog</summary>  
-	<details>
-	<summary>[system/admin/run.php](system/admin/run.php)</summary>
-	-Updated to use the new theme file.  
-	-Added MSGBanner.js script.  
-	-Added the version tags to prevent "bad cache".  
-	-Removed the strange page reg thing I did...  
-	-Fixed a session timeout issue.  
-	-New MSGBanner script.  
-	</details>
+<summary>ChangeLog</summary>  
+<details>
+<summary>[system/admin/run.php](system/admin/run.php)</summary>
+-Updated to use the new theme file.  
+-Added MSGBanner.js script.  
+-Added the version tags to prevent "bad cache".  
+-Removed the strange page reg thing I did...  
+-Fixed a session timeout issue.  
+-New MSGBanner script.  
+</details>
 
-	<details>
-	<summary>[system/admin/sys/editTheme.php](system/admin/sys/editTheme.php) </summary>
-	- Updated to use the new theme file.
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/theme.php](system/admin/sys/pages/theme.php)</summary>
-	- Updated to use the new theme file.
-	</details>
-	
-	<details>
-	<summary>[system/main/theme/theme.php](system/main/theme/theme.php)</summary>
-	--REPLACES themeColours.scss.php thing...
-	</details>
-	
-	<details>
-	<summary>[system/main/theme/animations.css](system/main/theme/animations.css)</summary>
-	--ADDED
-	</details>
+<details>
+<summary>[system/admin/sys/editTheme.php](system/admin/sys/editTheme.php) </summary>
+- Updated to use the new theme file.
+</details>
 
-	<details>
-	<summary>[data/theme.php](data/theme.php)</summary>
-	--REPLACES colours.php
-	</details>
-	
-	<details>
-	<summary>[system/jScipts/loading.js](system/jScipts/loading.js)</summary>
-	- Removed MSGBanner parts.
-	</details>
-	
-	<details>
-	<summary>[system/jScipts/MSGBanner.js](system/jScipts/MSGBanner.js)</summary>
-	--NEW: Contains the click to close and the timeout.
-	</details>
-	
-	<details>
-	<summary>[system/main/run.php](system/main/run.php)</summary>
-	-Updated to use the new theme file.  
-	-Updated to report 404 as a header.  
-	-Updated to make edit button direct to settings when a 404 has occurred.  
-	-Added the MSGBanner.js script.  
-	-Added the version tags to prevent "bad cache".  
-	-Fixed a session timeout issue.  
-	-New MSGBanner script.  
-	-Re-added the animations.  
-	-No longer requiring file. Only echoing its contents. (More secure and prevents scripts from running.)  
-	</details>
-	
-	<details>
-	<summary>[system/installer/sys/install.php](system/installer/sys/install.php)</summary>
-	-Updated to use the new theme file.  
-	-Added the version tags to prevent "bad cache".  
-	</details>
-	
-	<details>
-	<summary>[system/jScripts/wysiwyg.php](system/jScripts/wysiwyg.php)</summary>
-	- Updated to use the new theme file.
-	</details>
-	
-	<details>
-	<summary>[system/installer/sys/sumbit.php](system/installer/sys/sumbit.php)</summary>
-	- Fixed MSGBanner parameters.
-	</details>
-	
-	<details>
-	<summary>[system/upgrader/run.php](system/upgrader/run.php)</summary>
-	- Updated to edit data folder colours.php to theme.php.
-	</details>
+<details>
+<summary>[system/admin/sys/pages/theme.php](system/admin/sys/pages/theme.php)</summary>
+- Updated to use the new theme file.
+</details>
 
-	<details>
-	<summary>[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php)</summary>
-	- Updated to the new theme stuffs.
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php)</summary>
-	- Re-arranged the buttons.
-	</details>
-	
-	<details>
-	<summary>system/admin/sys/pages/pages_*.php</summary>
-	--REMOVED
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php) </summary>
-	- Updated to contain ALL pages data.
-	</details>
-	
-	<details>
-	<summary>system/admin/sys/sys.pagereg.php</summary>
-	--REMOVED
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php)</summary>
-	- Updated to use new theme var.
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/*](system/admin/sys/) (excluding pages folder)</summary>  
-	-Updated to work with the new loggedin check.  
-	-Updated to use new MSGBanner.  
-	</details>
-	
-	<details>
-	<summary>[index.php](index.php)</summary>
-	-Added the new loggedin check.  
-	-Added getUsers() function.  
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php)</summary>
-	- Now uses the userList function.
-	</details>
+<details>
+<summary>[system/main/theme/theme.php](system/main/theme/theme.php)</summary>
+--REPLACES themeColours.scss.php thing...
+</details>
 
-	<details>
-	<summary>[system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php)</summary>
-	-Added server admin email.
-	</details>
-	
-	<details>
-	<summary>[system/main/theme/main.css](system/main/theme/main.css)</summary>
-	-Fixed stretched images issue.
-	</details>
-	
-	<details>
-	<summary>[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php)</summary>
-	- Viewer is no longer a pesky iframe. It is a proper image viewer this time.
-	</details>
+<details>
+<summary>[system/main/theme/animations.css](system/main/theme/animations.css)</summary>
+--ADDED
+</details>
+
+<details>
+<summary>[data/theme.php](data/theme.php)</summary>
+--REPLACES colours.php
+</details>
+
+<details>
+<summary>[system/jScipts/loading.js](system/jScipts/loading.js)</summary>
+- Removed MSGBanner parts.
+</details>
+
+<details>
+<summary>[system/jScipts/MSGBanner.js](system/jScipts/MSGBanner.js)</summary>
+--NEW: Contains the click to close and the timeout.
+</details>
+
+<details>
+<summary>[system/main/run.php](system/main/run.php)</summary>
+-Updated to use the new theme file.  
+-Updated to report 404 as a header.  
+-Updated to make edit button direct to settings when a 404 has occurred.  
+-Added the MSGBanner.js script.  
+-Added the version tags to prevent "bad cache".  
+-Fixed a session timeout issue.  
+-New MSGBanner script.  
+-Re-added the animations.  
+-No longer requiring file. Only echoing its contents. (More secure and prevents scripts from running.)  
+</details>
+
+<details>
+<summary>[system/installer/sys/install.php](system/installer/sys/install.php)</summary>
+-Updated to use the new theme file.  
+-Added the version tags to prevent "bad cache".  
+</details>
+
+<details>
+<summary>[system/jScripts/wysiwyg.php](system/jScripts/wysiwyg.php)</summary>
+- Updated to use the new theme file.
+</details>
+
+<details>
+<summary>[system/installer/sys/sumbit.php](system/installer/sys/sumbit.php)</summary>
+- Fixed MSGBanner parameters.
+</details>
+
+<details>
+<summary>[system/upgrader/run.php](system/upgrader/run.php)</summary>
+- Updated to edit data folder colours.php to theme.php.
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php)</summary>
+- Updated to the new theme stuffs.
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php)</summary>
+- Re-arranged the buttons.
+</details>
+
+<details>
+<summary>system/admin/sys/pages/pages_*.php</summary>
+--REMOVED
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/pages.php](system/admin/sys/pages/pages.php) </summary>
+- Updated to contain ALL pages data.
+</details>
+
+<details>
+<summary>system/admin/sys/sys.pagereg.php</summary>
+--REMOVED
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php)</summary>
+- Updated to use new theme var.
+</details>
+
+<details>
+<summary>[system/admin/sys/*](system/admin/sys/) (excluding pages folder)</summary>  
+-Updated to work with the new loggedin check.  
+-Updated to use new MSGBanner.  
+</details>
+
+<details>
+<summary>[index.php](index.php)</summary>
+-Added the new loggedin check.  
+-Added getUsers() function.  
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/users.php](system/admin/sys/pages/users.php)</summary>
+- Now uses the userList function.
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/loggedin.php](system/admin/sys/pages/loggedin.php)</summary>
+-Added server admin email.
+</details>
+
+<details>
+<summary>[system/main/theme/main.css](system/main/theme/main.css)</summary>
+-Fixed stretched images issue.
+</details>
+
+<details>
+<summary>[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php)</summary>
+- Viewer is no longer a pesky iframe. It is a proper image viewer this time.
+</details>
 </details>
 
 ###v1.02 (Intent Corgi)
