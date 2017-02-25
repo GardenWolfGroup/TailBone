@@ -1,15 +1,19 @@
 #[TailBone Website Software v2.0](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
 ##Table of Contents
 1. [Version History](#version-history)
-	1. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
-	2. [v1.02 Intent Corgi](#v102-intent-corgi)
-	3. [v1.01 Tentative Corgi](#v101-tentative-corgi)
-	4. [v1.0 Curious Corgi](#v10-curious-corgi)
+	1. [v2.1 Excitable Penguin](#v21-excitable-penguin) 
+	2. [v2.0 Punctual Penguin](#v20-punctual-penguin) 
+	3. [v1.02 Intent Corgi](#v102-intent-corgi)
+	4. [v1.01 Tentative Corgi](#v101-tentative-corgi)
+	5. [v1.0 Curious Corgi](#v10-curious-corgi)
 2. [General Information](#general-information)
 3. [Features](#features)
 4. [Installation](#installation)
 
 ##Version History
+
+	###v2.1 (Excitable Penguin)
+	We updated things.
 <details>
 	<summary>###v2.0 (Punctual Penguin)</summary>
 	[system/admin/run.php](system/admin/run.php)  
