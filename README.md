@@ -12,8 +12,8 @@
 
 ##Version History
 
-	###v2.1 (Excitable Penguin)
-	We updated things.
+###v2.1 (Excitable Penguin)
+We updated things.
 <details>
 	<summary>###v2.0 (Punctual Penguin)</summary>
 	[system/admin/run.php](system/admin/run.php)  
