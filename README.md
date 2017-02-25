@@ -15,7 +15,7 @@
 ###v2.1 (Excitable Penguin)
 We updated things.
 
-##v2.0 (Punctual Penguin)
+###v2.0 (Punctual Penguin)
 <details>
 	<summary>ChangeLog</summary>  
 	[system/admin/run.php](system/admin/run.php)  
