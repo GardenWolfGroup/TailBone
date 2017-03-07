@@ -9,8 +9,7 @@
 <style>
 	.hoveringBox{
 		box-shadow: 1px 1px 29px -5px rgba(0,0,0,0.66);
-		max-width:90%;
-		width:650px;
+		max-width:90%!important;
 		border:2px solid<?php echo($theme['bodyBackground']) ?>;
 		padding:10px;margin-top:10px;
 	}
@@ -27,6 +26,12 @@
 		margin-bottom:-8px;
 		margin-right:5px;
 	}
+	
+	.progressBar{
+		background:<?php echo($theme['bodyBackground']); ?>;
+		max-width:90%!important;
+		padding:6px;
+	}
 </style>
 
 <!-- Server info -->
@@ -39,12 +44,16 @@
 		//Hosted
 		if($hosted){
 			$host = 'Yes';
+			$hostName = $serverVars['hostName'];
+			$hostVersion = $serverVars['hostVersion'];
 		}else{
 			$host = 'No';
+			$hostName = 'None';
+			$hostVersion = 'Not using a host.';
 		}
 		
 		//DUMP
-		echo('<p>Tailbone: '.$TB['version'].'<br>Web: '.$_SERVER['SERVER_SOFTWARE'].'<br>php: '.$phpversion[0].'<br>OS: '.PHP_OS.'<br>Host: '.$serverVars['hostName'].' - '.$serverVars['hostVersion'].'</p>');
+		echo('<p>Tailbone: '.$TB['version'].'<br>Web: '.$_SERVER['SERVER_SOFTWARE'].'<br>php: '.$phpversion[0].'<br>OS: '.PHP_OS.'<br>Host: '.$hostName.' - '.$hostVersion.'</p>');
 	?>
 </div>
 
@@ -55,13 +64,8 @@
 		//Calculating!
 		$spacePercent = 100 - (round(disk_free_space('/')/disk_total_space('/'),2)*100);
 		
-		//And round it up if too low
-		if($spacePercent < 1){
-			$spacePercent = 1;
-		}
-		
 		//DUMP
-		echo('<p style="margin:5px;">Space used: '.$spacePercent.'%</p><div style="background:'.$theme['bodyBackground'].';width:600px; max-width:90%; padding:6px;"><div style="background:'.$theme['contentBackground'].'; width:'.$spacePercent.'%;text-align:center;min-width:30px;">'.$spacePercent.'%</div></div>');
+		echo('<p style="margin:5px;">Space used: '.$spacePercent.'%</p><div class="progressBar"><div style="background:'.$theme['contentBackground'].'; width:'.$spacePercent.'%;text-align:center;min-width:38px;">'.$spacePercent.'%</div></div>');
 		
 		//Max file upload
 		$maxFileSize = str_replace("M"," Megabytes",ini_get("upload_max_filesize"));
@@ -77,22 +81,42 @@
 	
 		//CPU Load
 		$load = sys_getloadavg();
-		$loadPercent = $load[1] * 100;
-    
-    echo('<p style="margin:5px;">CPU Usage (5m avg): '.$loadPercent.'%</p><div style="background:'.$theme['bodyBackground'].';width:600px; max-width:90%; padding:6px;"><div style="background:'.$theme['contentBackground'].'; width:'.$loadPercent.'%;text-align:center;min-width:30px;">'.$loadPercent.'%</div></div>');
+		
+		//check to make sure EXEC is permitted.
+		if(exec('echo EXEC') == 'EXEC'){
+			$exec = true;
+		}else{
+			$exec = false;
+		}
+		
+		if($exec){
+			$cores = shell_exec('nproc');
+			$loadPercent = ($load[1] * 100) / $cores;
+			if($loadPercent > 100){
+				$loadPercent = 100;
+			}
+		}else{
+			$loadPercent = 0;
+		}
+
+    echo('<p style="margin:5px;">CPU Usage (5m avg): '.$loadPercent.'%</p><div class="progressBar"><div style="background:'.$theme['contentBackground'].'; width:'.$loadPercent.'%;text-align:center;min-width:38px;">'.$loadPercent.'%</div></div>');
     
     //Get the memory stats
-    $free = (string)trim(shell_exec('free'));
-		$freeArr = explode("\n", $free);
-		
-		//Clean it
-		$mem = explode(" ", $freeArr[1]);
-		$mem = array_merge(array_filter($mem));
-		
-		//And format it
-		$memoryUsage = round($mem[2]/$mem[1]*100,2);
+    if($exec){
+    	$free = (string)trim(shell_exec('free'));
+			$freeArr = explode("\n", $free);
+			
+			//Clean it
+			$mem = explode(" ", $freeArr[1]);
+			$mem = array_merge(array_filter($mem));
+			
+			//And format it
+			$memoryUsage = round($mem[2]/$mem[1]*100,2);
+    }else{
+    	$memoryUsage = 0;
+    }
 	 
-    echo('<p style="margin:5px;">Memory used: '.$memoryUsage.'%</p><div style="background:'.$theme['bodyBackground'].';width:600px; max-width:90%; padding:6px;"><div style="background:'.$theme['contentBackground'].'; width:'.$memoryUsage.'%;text-align:center;min-width:30px;">'.$memoryUsage.'%</div></div>');
+    echo('<p style="margin:5px;">Memory used: '.$memoryUsage.'%</p><div class="progressBar"><div style="background:'.$theme['contentBackground'].'; width:'.$memoryUsage.'%;text-align:center;min-width:38px;">'.$memoryUsage.'%</div></div>');
 	?>
 </div>
 
