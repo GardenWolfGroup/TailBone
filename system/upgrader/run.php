@@ -7,35 +7,6 @@
 	}
 	//////////UPGRADE THINGS GO HERE IF CONFIGS NEED CHANGING///////////////
 
-	require('./data/theme.php');
-	
-	$write='
-<?PHP 
-	$theme = array(
-		"bodyBackground" => "#'.$theme["bodyBackground"].'",
-		"bodyBackgroundImage" => "'.$theme["bodyBackgroundImage"].'",
-		"bodyBackgroundRepeat" => "'.$theme["bodyBackgroundRepeat"].'",
-		"navHighlightColour" => "#'.$theme["navHighlightColour"].'",
-		"contentBackground" => "#'.$theme["contentBackground"].'",
-		"contentText" => "#'.$theme["contentText"].'",
-		"topperBackground" => "#'.$theme["topperBackground"].'",
-		"topperText" => "#'.$theme["topperText"].'",
-		"enderBackground" => "#'.$theme["enderBackground"].'",
-		"navBackground" => "#'.$theme["navBackground"].'",
-		"navText" => "#'.$theme["navText"].'",
-		"fontFamily" => "'.$theme["fontFamily"].'",
-		"customFont" => "'.$theme['customFont'].'",
-	);
-?>
-	';
-	
-	//Get the config file and write the new stuff to it
-	$location = './data/theme.php';
-	$content = fopen($location,'w');
-	fwrite($content,$write);
-	fclose($content);
-
-
 	//dont change this. It is required.
 	$dataVersionFile = fopen('./data/dataVersion.php', 'w');
 	fwrite($dataVersionFile, "<?php\n\$dataVersion=".$TB['version'].";\n?>");
