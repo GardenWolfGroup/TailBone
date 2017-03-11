@@ -69,8 +69,8 @@
 		}
 	}
 	
-	$TB['version'] = 2.1;
-	$TB['codeName'] = "Excitable Penguin";
+	$TB['version'] = 2.2;
+	$TB['codeName'] = "Excitable Penguin - B";
 	$runningInIndex = true; //Tells scripts that they are running in the index as they should be.
 	
 	if(file_exists('./data/dataVersion.php')){
