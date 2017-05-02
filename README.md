@@ -1,5 +1,5 @@
-#[TailBone Website Software v2.2](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")
-##Table of Contents
+# [TailBone Website Software v2.2](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")  
+## Table of Contents
 1. [Version History](#version-history)
 	1. [v2.2 Excitable Penguin B](#v22-excitable-penguin-b)
 	2. [v2.1 Excitable Penguin](#v21-excitable-penguin) 
@@ -11,15 +11,15 @@
 3. [Features](#features)
 4. [Installation](#installation)
 
-##Version History
+## Version History  
 
-###v2.2 (Excitable Penguin B)
-Various fixes
+### v2.2 (Excitable Penguin B)  
+Various fixes  
 
-###v2.1 (Excitable Penguin)
-We updated things.
+### v2.1 (Excitable Penguin)  
+We updated things.  
 
-###v2.0 (Punctual Penguin)
+### v2.0 (Punctual Penguin)  
 <details>
 <summary>ChangeLog</summary>  
 <details>
@@ -162,9 +162,9 @@ We updated things.
 <summary>[system/admin/sys/pages/file_manager.php](system/admin/sys/pages/file_manager.php)</summary>
 - Viewer is no longer a pesky iframe. It is a proper image viewer this time.
 </details>
-</details>
+</details>  
 
-###v1.02 (Intent Corgi)
+### v1.02 (Intent Corgi)  
 <details>
 <summary>Changelog</summary>
 Added a sleep arg to [system/upgrader/run.php](system/upgrader/run.php) to avoid "Redirected too many times" issue.
@@ -184,19 +184,19 @@ Removed system/main/theme/animations.css as it is no longer needed.
 Updated [contributors](contributors.md), also changed file format from txt to md.
 </details>
 
-###v1.01 (Tentative Corgi)  
+### v1.01 (Tentative Corgi)  
 Updated [system/installer/sys/submit.php](system/installer/sys/submit.php) file so that the "construction" variable is defined after Tailbone installation.
 
-###v1.0 (Curious Corgi) 
+### v1.0 (Curious Corgi)  
 The intial release of Tailbone.
 
-##General Information
+## General Information  
 Tailbone is a software for Web servers to use, this is designed for \*NIX Servers,	 Windows Server DOESN'T WORK with Tailbone at all!
   
 Any questions regarding this software should be directed at [Toshi Bennett](mailto:toshi@gardenwolf.com?Subject=Tailbone "Send an email to Toshi") or [Cody Brian](mailto:cody@gardenwolf.com?Subject=Tailbone "Send an email to Cody")
 
 
-## Features
+## Features  
 1. File Uploader
   1. Subdirectroy support
   2. Only supports image files in source
@@ -208,9 +208,9 @@ Any questions regarding this software should be directed at [Toshi Bennett](mail
 3. Settings editior through graphical frontend
 4. Multiple users
   1. Password Reset
-  2. User Deletion
-
-##Installation
+  2. User Deletion  
+  
+## Installation  
 1. Download the .zip file
 2. Extract into target directory
 3. Make sure the permissions of the data directory are set corrently.
