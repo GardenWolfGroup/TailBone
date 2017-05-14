@@ -16,7 +16,7 @@
 ## License
 Tailbone is licensed under GPLv3, full license text is [here](LICENSE.md).  
 
-We would appricate it if any person or team would notify us about any edited Tailbone Versions, and as such you will be added to our [community.md](community.md) file.  If you have made an edited version of Tailbone, please email us at [community@gardenwolf.com](mailto:community@gardenwolf.com).
+We would appricate it if any person or team would notify us about any edited Tailbone Versions.  If you have made an edited version of Tailbone, please email us at [community@gardenwolf.com](mailto:community@gardenwolf.com).
 
 ## Version History  
 
