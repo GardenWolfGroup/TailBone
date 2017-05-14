@@ -1,4 +1,4 @@
-# [TailBone Website Software v2.2](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")  
+# [TailBone Website Software v2.3](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")  
 ## Table of Contents
 1. [License](#license)
 2. [Version History](#version-history)
