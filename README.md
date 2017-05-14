@@ -1,6 +1,7 @@
 # [TailBone Website Software v2.2](https://tailbone.gardenwolf.com/ "Tailbone's Official Website")  
 ## Table of Contents
-1. [Version History](#version-history)
+1. [License](#license)
+2. [Version History](#version-history)
 	1. [v2.3 Flying Penguin](#v23-flying-penguin)
 	2. [v2.2 Excitable Penguin B](#v22-excitable-penguin-b)
 	3. [v2.1 Excitable Penguin](#v21-excitable-penguin) 
@@ -8,9 +9,14 @@
 	5. [v1.02 Intent Corgi](#v102-intent-corgi)
 	6. [v1.01 Tentative Corgi](#v101-tentative-corgi)
 	7. [v1.0 Curious Corgi](#v10-curious-corgi)
-2. [General Information](#general-information)
-3. [Features](#features)
-4. [Installation](#installation)
+3. [General Information](#general-information)
+4. [Features](#features)
+5. [Installation](#installation)
+
+## License
+Tailbone is licensed under GPLv3, full license text is [here](LICENSE.md).  
+
+We would appricate it if any person or team would notify us about any edited Tailbone Versions, and as such you will be added to our [community.md](community.md) file.  If you have made an edited version of Tailbone, please email us at [community@gardenwolf.com](mailto:community@gardenwolf.com).
 
 ## Version History  
 
