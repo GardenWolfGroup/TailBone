@@ -24,19 +24,19 @@
 	$write='
 <?PHP 
 	$theme = array(
-		"bodyBackground" => "#'.$_POST["bodyBackground"].'",
-		"bodyBackgroundImage" => "'.$_POST["bodyBackgroundImage"].'",
-		"bodyBackgroundRepeat" => "'.$_POST["bodyBackgroundRepeat"].'",
-		"navHighlightColour" => "#'.$_POST["navHighlightColour"].'",
-		"contentBackground" => "#'.$_POST["contentBackground"].'",
-		"contentText" => "#'.$_POST["contentText"].'",
-		"topperBackground" => "#'.$_POST["topperBackground"].'",
-		"topperText" => "#'.$_POST["topperText"].'",
-		"enderBackground" => "#'.$_POST["enderBackground"].'",
-		"navBackground" => "#'.$_POST["navBackground"].'",
-		"navText" => "#'.$_POST["navText"].'",
-		"fontFamily" => "'.$_POST["fontFamily"].'",
-		"customFont" => "'.$_POST['customFont'].'",
+		\'bodyBackground\' => \'#'.addslashes(htmlspecialchars($_POST['bodyBackground'])).'\',
+		\'bodyBackgroundImage\' => \''.addslashes(htmlspecialchars($_POST['bodyBackgroundImage'])).'\',
+		\'bodyBackgroundRepeat\' => \''.addslashes(htmlspecialchars($_POST['bodyBackgroundRepeat'])).'\',
+		\'navHighlightColour\' => \'#'.addslashes(htmlspecialchars($_POST['navHighlightColour'])).'\',
+		\'contentBackground\' => \'#'.addslashes(htmlspecialchars($_POST['contentBackground'])).'\',
+		\'contentText\' => \'#'.addslashes(htmlspecialchars($_POST['contentText'])).'\',
+		\'topperBackground\' => \'#'.addslashes(htmlspecialchars($_POST['topperBackground'])).'\',
+		\'topperText\' => \'#'.addslashes(htmlspecialchars($_POST['topperText'])).'\',
+		\'enderBackground\' => \'#'.addslashes(htmlspecialchars($_POST['enderBackground'])).'\',
+		\'navBackground\' => \'#'.addslashes(htmlspecialchars($_POST['navBackground'])).'\',
+		\'navText\' => \'#'.addslashes(htmlspecialchars($_POST['navText'])).'\',
+		\'fontFamily\' => \''.addslashes(htmlspecialchars($_POST['fontFamily'])).'\',
+		\'customFont\' => \''.addslashes(htmlspecialchars($_POST['customFont'])).'\',
 	);
 ?>
 	';

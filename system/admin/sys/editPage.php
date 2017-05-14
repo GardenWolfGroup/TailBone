@@ -28,12 +28,12 @@
 	$location = './data/pages/'.$_POST['pageName'].'/';
 	
 	//Open da page!  And add the new content
-	$content = fopen($location.'page.php','w');
+	$content = fopen($location.'page.html','w');
 	fwrite($content,$_POST['content']);
 	fclose($content);
 	
 	//Check to make sure that it has the new content
-	if(file_get_contents($location.'page.php') == $_POST['content']){
+	if(file_get_contents($location.'page.html') == $_POST['content']){
 		
 		//If you wanted to return to the page, this'll show you the way
 		if(isset($_POST['goToPage'])){

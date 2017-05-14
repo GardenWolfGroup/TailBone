@@ -15,7 +15,7 @@
 	//start loading stuff, are we in construction mode?
 	if($settings['construction'] != true){
 		if(isset($_GET['page'])){
-			$pageFile = './data/pages/'.$_GET['page'].'/page.php';
+			$pageFile = './data/pages/'.$_GET['page'].'/page.html';
 			if(file_exists($pageFile)){
 				$_GET['page'] = strtolower($_GET['page']);
 				$pageName = ucfirst($_GET['page']);
@@ -29,7 +29,7 @@
 		}else{
 			$_GET['page'] = "home";
 			$pageName = 'Home';
-			$pageFile = './data/pages/home/page.php';
+			$pageFile = './data/pages/home/page.html';
 			$four04 = false;
 		}
 	}else{
@@ -91,10 +91,11 @@
 				
 				if(isset($_SESSION['loggedin'])&&$_SESSION['loggedin'] == true){
 					if(!$four04){
-						echo('<a id="editButton" href="./?admin&page=pages&intent=edit&select='.$_GET['page'].'&goToPage"></a>');
+						echo('<a title="Edit page" class="materialCircleButton" href="./?admin&page=pages&intent=edit&select='.$_GET['page'].'&goToPage"></a>');
 					}else{
-						echo('<a id="editButtonError" href="./?admin&page=settings"></a>');
+						echo('<a title="Edit error message" class="materialCircleButton" href="./?admin&page=settings"></a>');
 					}
+					echo('<a title="New page" class="materialCircleButtonPlus" href="./?admin&page=pages&intent=create"></a>');
 					echo('<script src="./system/jScripts/keepalive.js?'.$TB['version'].'"></script>');
 				}
 			?>
@@ -141,7 +142,7 @@
 			?>
 			<div id="ender">
 				<?PHP
-					echo($settings['footerContent']);
+					echo('<p style="padding:3px; text-align:center;">'.$settings['footerContent'].'<p>');
 				?>
 			</div>
 		</div>

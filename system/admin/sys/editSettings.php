@@ -24,27 +24,27 @@
 		die();
 	}
 	
-	$_POST['siteDescription'] = str_replace('"', "'", $_POST['siteDescription']);
+	$_POST['siteDescription'] = htmlspecialchars($_POST['siteDescription']);
 	
 	if(isset($_POST['construction'])){
-		$construction = "true";
+		$construction = 'true';
 	}else{
-		$construction = "false";
+		$construction = 'false';
 	}
 	
 	$data = '
 <?PHP
 	$settings = array(
-		"siteName" => "'.$_POST['siteName'].'",
-		"siteDescription" => "'.$_POST['siteDescription'].'",
-		"siteKeywords" => "'.$_POST['siteKeywords'].'",
-		"siteAuthor" => "'.$_POST['siteAuthor'].'",
-		"loginNotice" => "'.$_POST['loginNotice'].'",
-		"analyticsCode" => file_get_contents("./data/analyticsCode.php"),
-		"footerContent" => file_get_contents("./data/footerContent.php"),
-		"adContent" => file_get_contents("./data/adContent.php"),
-		"construction" => '.$construction.',
-		"four04Message" => "'.$_POST['four04Message'].'",
+		\'siteName\' => \''.addslashes(htmlspecialchars($_POST['siteName'])).'\',
+		\'siteDescription\' => \''.addslashes(htmlspecialchars($_POST['siteDescription'])).'\',
+		\'siteKeywords\' => \''.addslashes(htmlspecialchars($_POST['siteKeywords'])).'\',
+		\'siteAuthor\' => \''.addslashes(htmlspecialchars($_POST['siteAuthor'])).'\',
+		\'loginNotice\' => \''.addslashes(htmlspecialchars($_POST['loginNotice'])).'\',
+		\'analyticsCode\' => file_get_contents("./data/analyticsCode.php"),
+		\'footerContent\' => \''.addslashes(htmlspecialchars($_POST['footerContent'])).'\',
+		\'adContent\' => file_get_contents("./data/adContent.php"),
+		\'construction\' => '.$construction.',
+		\'four04Message\' => \''.addslashes(htmlspecialchars($_POST['four04Message'])).'\',
 	);
 ?>
 	';
@@ -53,12 +53,6 @@
 	$location = './data/settings.php';
 	$content = fopen($location, 'w');
 	fwrite($content,$data);
-	fclose($content);
-	
-	//Update the footer content
-	$location = './data/footerContent.php';
-	$content= fopen($location, 'w');
-	fwrite($content,$_POST['footerContent']);
 	fclose($content);
 	
 	//The advertisements that everyone loves!

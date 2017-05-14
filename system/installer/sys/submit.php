@@ -40,16 +40,16 @@
 	$write='
 <?PHP
 	$settings = array(
-		"siteName" => "'.$_POST['siteName'].'",
-		"siteDescription" => "",
-		"siteKeywords" => "",
-		"siteAuthor" => "'.$_POST['siteAuthor'].'",
-		"loginNotice" => "Notice: This is a private server meant to only be accessed by authorized persons, if you are not authorized to be here, please kindly leave.",
-		"analyticsCode" => file_get_contents("./data/analyticsCode.php"),
-		"footerContent" => file_get_contents("./data/footerContent.php"),
-		"adContent" => file_get_contents("./data/adContent.php"),
-		"four04Message" => "Uh oh, looks like that page has gone missing or has been deleted.",
-		"construction" => "false",
+		\'siteName\' => \''.addslashes(htmlspecialchars($_POST['siteName'])).'\',
+		\'siteDescription\' => \'\',
+		\'siteKeywords\' => \'\',
+		\'siteAuthor\' => \''.addslashes(htmlspecialchars($_POST['siteAuthor'])).'\',
+		\'loginNotice\' => \'Notice: This is a private server meant to only be accessed by authorized persons, if you are not authorized to be here, please kindly leave.\',
+		\'analyticsCode\' => file_get_contents(\'./data/analyticsCode.php\'),
+		\'footerContent\' => \'This is the default content, you can edit it in settings in the admin panel!\',
+		\'adContent\' => file_get_contents(\'./data/adContent.php\'),
+		\'four04Message\' => \'Uh oh, looks like that page has gone missing or has been deleted.\',
+		\'construction\' => false,
 	);
 ?>
 	';

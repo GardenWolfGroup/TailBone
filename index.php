@@ -6,9 +6,11 @@
 	//
 	//
 	//
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
+	if(isset($_GET['debug'])){
+		ini_set('display_errors', 1);
+		ini_set('display_startup_errors', 1);
+		error_reporting(E_ALL);
+	}
 
 	$hosted = false;
 	if(file_exists('/var/GWG/webInit.php')){
@@ -62,15 +64,15 @@
 		if($loggedin){
 			require('./data/users.php');
 			$return = array();
-			foreach($users as $user => $user){ //bit of a hack..
-				array_push($return, $user);
+			foreach($users as $userP1 => $userP2){ //bit of a hack..
+				array_push($return, $userP1);
 			}
 			return $return;
 		}
 	}
 	
-	$TB['version'] = 2.2;
-	$TB['codeName'] = "Excitable Penguin - B";
+	$TB['version'] = 2.3;
+	$TB['codeName'] = "Flying Penguin";
 	$runningInIndex = true; //Tells scripts that they are running in the index as they should be.
 	
 	if(file_exists('./data/dataVersion.php')){

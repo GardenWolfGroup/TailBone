@@ -11,6 +11,7 @@ if(!isset($_GET['intent'])){ //The user has not asked to do one of the following
 		<h2>What would you like to do?</h2>
 		<a class="abtn_blue" href="./?admin&page=pages&intent=create">Create a page</a>
 		<a class="abtn_blue" href="./?admin&page=pages&intent=edit">Edit a page</a>
+		<a class="abtn_blue" href="./?admin&page=pages&intent=rename">Rename a page</a>
 		<a class="abtn_blue" href="./?admin&page=pages&intent=delete">Delete a page</a>
 	');
 	
@@ -26,7 +27,7 @@ if(!isset($_GET['intent'])){ //The user has not asked to do one of the following
 		<form action="./?admin&request&action=makePage" method="post" id="form">
 			<input class="fancy_input" type="text" name="pageName" placeholder="Page Name">
 			<textarea class="WYSIWYG" name="content" form="form"></textarea>
-			<input class="fancy_input" type="submit" value="Make my page!" style="margin-top:5px;">
+			<input onclick="setSaved()" class="fancy_input" type="submit" value="Make my page!" style="margin-top:5px;">
 		</form>
 	');
 }elseif($_GET['intent'] == 'delete'){ //the user wishes to delete a page.
@@ -51,7 +52,7 @@ if(!isset($_GET['intent'])){ //The user has not asked to do one of the following
 	
 	//if the user has selected a page, go ahead and get the editor.
 	if(isset($_GET['select'])){
-		$selectedFile = './data/pages/'.$_GET['select'].'/page.php';
+		$selectedFile = './data/pages/'.$_GET['select'].'/page.html';
 		//gets the contents of the file in question. (We found drugs in its house, we need to know everything it does.)
 		$selectedFileData = file_get_contents($selectedFile);
 		//Replaces the _ in the file with a space to make it look pretty.
@@ -77,10 +78,10 @@ if(!isset($_GET['intent'])){ //The user has not asked to do one of the following
 		echo("
 			<h2 style='margin-left:5px;'>Editing the page '".$nameOfPage."'</h2>
 			<form action='./?admin&request&action=editPage' method='post' id='form'>
-				Go to this page when done? <input type='checkbox' name='goToPage' ".$checked." class='fancy_input'>
 				<input style='display:none;' name='pageName' type='text' value='".$_GET['select']."'>
 				<textarea class='WYSIWYG' name='content' form='form'>".$selectedFileData."</textarea>
-				<input class='fancy_input' type='submit' value='Edit my page!' style='margin-top:5px;'>
+				Go to this page when done? <input type='checkbox' name='goToPage' ".$checked." class='fancy_input'><br>
+				<input onclick='setSaved()' class='fancy_input' type='submit' value='Edit my page!' style='margin-top:5px;'>
 			</form>
 		");
 		
@@ -101,4 +102,21 @@ if(!isset($_GET['intent'])){ //The user has not asked to do one of the following
 		}
 		
 	}
+}elseif($_GET['intent'] == 'rename'){
+	echo('<h2>Select the page to rename:</h2>');
+	echo('<form action="./?admin&request&action=renamePage" method="post">');
+	//looks to see if any pages are home, myabe the garden Gnomes scared the away.. We had better git the bash tool if they are locked away somewhere.
+	$Pages = scandir('./data/pages/');
+	sort($Pages); // this does the sorting
+	echo('<select required class="fancy_input" name="original">');
+	foreach($Pages as $Pages_FE){
+		//checking to make sure that the returned is not the current dir or the previous dir.
+		if ($Pages_FE != "." && $Pages_FE != ".." && $Pages_FE != "home") {
+			echo'<option value="'.$Pages_FE.'">'.str_replace("_", " ",$Pages_FE).'</option>';
+		}
+	}
+	echo('</select> To ');
+	echo('<input required name="new" placeholder="New name" type="text" class="fancy_input"><br>');
+	echo('<input type="submit" value="Change name!" class="fancy_input">');
+	echo('</form>');
 }

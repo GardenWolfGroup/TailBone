@@ -47,10 +47,13 @@
 	#nav-navigation div:active{
 		background-color:'.$theme["navHighlightColour"].';
 	}
-	#editButton{
+	.materialCircleButton{
 		background-color:'.$theme['topperBackground'].';
 	}
-	#editButtonError{
+	.materialCircleError{
+		background-color:'.$theme['topperBackground'].';
+	}
+	.materialCircleButtonPlus{
 		background-color:'.$theme['topperBackground'].';
 	}
 	.fancy_input, .abtn_blue{

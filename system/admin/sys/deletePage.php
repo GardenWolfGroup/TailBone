@@ -23,7 +23,7 @@
 	$location = './data/pages/'.$_GET['delete'].'/';
 	
 	//Delete the file and remove the directory
-	unlink($location.'page.php');
+	unlink($location.'page.html');
 	rmdir($location);
 	
 	//If the page doesn't exist anymore, display the success message

@@ -15,8 +15,8 @@
 		if($hosted && $_SESSION['user'] == $serverVars['serverAdmin']){
 			echo('<select id="userName" name="user" class="fancy_input">');
 			foreach(getUsers() as $key => $value){
-				if($key != $serverVars['serverAdmin']){
-					echo('<option value="'.$key.'">'.ucfirst($key).'</option>');
+				if($value != $serverVars['serverAdmin']){
+					echo('<option value="'.$value.'">'.ucfirst($value).'</option>');
 				}
 			}
 			echo('</select><br>');

@@ -32,7 +32,7 @@
 	</script>
   <div style="text-align:center;">
     <h2>Welcome back, '.ucfirst($_SESSION['user']).'.</h2>
-		<script src="//tb-s.gardenwolf.com/version.php"></script>
+		<script src="//services.gardenwolf.com/?program=TailBoneUpdateService"></script>
 		<p>You are using TailBone '.$TB['version'].'.<br>Code Name: '.$TB['codeName'].'</p>
 		'.$extraContnet.'
 		<a href="https://github.com/GardenWolfGroup/TailBone"><div id="github" style="text-align:center;" align="center"></div></a>

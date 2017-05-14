@@ -42,7 +42,7 @@
 	//Otherwise make it!
 	else{
 		mkdir($location);
-		$content = fopen($location.'page.php','w');
+		$content = fopen($location.'page.html','w');
 		fwrite($content,$_POST['content']);
 		fclose($content);
 		

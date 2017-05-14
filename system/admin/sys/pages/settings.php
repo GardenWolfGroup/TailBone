@@ -5,8 +5,6 @@
 		die('403 FORBIDDEN: You are not allowed to access that file outside its normal running location.');
 	}
 ?>
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-<script src="./system/jScripts/wysiwyg.php"></script>
 <form action="./?admin&request&action=editSettings" method="post" id="form">
 	Is this site under construction? <input type="checkbox" name="construction" <?php if($settings['construction'] == true){echo('checked');}; ?> class="fancy_input"><br>
 	<h2>--General--</h2>
@@ -14,7 +12,7 @@
 	Site description: <input class="fancy_input" type="text" name="siteDescription" value="<?PHP echo($settings['siteDescription']); ?>"><br>
 	Site keywords: <input class="fancy_input" type="text" name="siteKeywords" placeholder ="ex: TailBone, CMS, Flat-File" value="<?PHP echo($settings['siteKeywords']); ?>" ><br>
 	Site Author: <input class="fancy_input" type="text" name="siteAuthor" placeholder ="ex: Cody Paul Brian" value="<?PHP echo($settings['siteAuthor']); ?>"><br>
-	Footer content:<br><textarea class="WYSIWYG" name="footerContent" form="form"><?PHP echo($settings['footerContent']); ?></textarea><br>
+	Footer content:<br><input class="fancy_input" name="footerContent" form="form" value="<?PHP echo($settings['footerContent']); ?>"><br>
 	<h2>--Advanced--</h2>
 	Page not found message: <input type="text" value="<?PHP echo($settings['four04Message']); ?>" name="four04Message" class="fancy_input"><br>
 	Analytics code and other scripts: <br><textarea class="fancy_input" form="form" name="analyticsCode"><?PHP echo($settings['analyticsCode']) ?></textarea><br>

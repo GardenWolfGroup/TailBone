@@ -85,7 +85,6 @@
 			<a href="./?admin&page=theme"><div class="nav_Theme">Theme</div></a>
 			<a href="./?admin&page=users"><div class="nav_Users">Users</div></a>
 			<a href="./?admin&page=file_manager"><div class="nav_File_manager">Files</div></a>
-			<a href="./?admin&page=sysinfo"><div class="nav_Sysinfo">System</div></a>
       <a href="./?admin&logout"><div>Logout</div></a>');
       
       			echo('<script src="./system/jScripts/keepalive.js?'.$TB['version'].'"></script>');
@@ -147,7 +146,7 @@
 			<br>
 			<div id="ender">
 				<?PHP
-					echo($settings['footerContent']);
+					echo('<p style="padding:3px; text-align:center;">'.$settings['footerContent'].'<p>');
 				?>
 			</div>
 		</div>

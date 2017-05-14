@@ -11,6 +11,8 @@ var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 
 
 var konamiCodePosition = 0;
 
+var seen = false;
+
 window.addEventListener('keydown', function(e) {
   var key = allowedKeys[e.keyCode];
   console.log(key);
@@ -29,7 +31,12 @@ window.addEventListener('keydown', function(e) {
 });
 
 function Konami(){
-  window.scrollTo(0, 0);
-	document.getElementById('barrelRoll').innerHTML = "<link rel='stylesheet' href='./system/main/theme/barrelRoll.css' type='text/css'>";
-	notification("Konami","You have activated cheats. Watch out, cheats are not permitted on some servers...",true,"https://en.wikipedia.org/wiki/Konami_Code","Konami Code - Wikipedia");
+  if(seen == false){
+    window.scrollTo(0, 0);
+  	document.getElementById('barrelRoll').innerHTML = "<link rel='stylesheet' href='./system/main/theme/barrelRoll.css' type='text/css'>";
+  	notification("Konami","You have activated cheats. Watch out, cheats are not permitted on some servers...",true,"https://en.wikipedia.org/wiki/Konami_Code","Konami Code - Wikipedia");
+  	seen = true;
+  }else{
+    console.log('Cheats are already activated.');
+  }
 }
